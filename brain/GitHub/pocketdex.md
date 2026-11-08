@@ -38,5 +38,6 @@ All 1025 Pokémon, sprites and fonts are bundled; no account, progress stays in 
 - 2026-11-08: first public release after a Jeda/Sansa restyle and /hone run. Council 6.6 (field-guide baseline) -> 8.38 (v1, best);
   shipped v3 (blind pair tie with v1, plus objective fixes). e2e 159/159, design gates pass (no emoji, no purple).
   Portfolio card, landing page and profile entry added. - [commit](https://github.com/juw12/pocketdex/commit/e08a646) · 2026-11-08 1209 pocketdex hone
+- 2026-11-08: Today gets one clear Next step strip; meadow gains clouds, butterflies, pond ripples and idle hops. e2e 159/159. - [commit](https://github.com/juw12/pocketdex/commit/229d874) · 2026-11-08 1950 pocketdex next step meadow
 
 See also: GitHub repos
