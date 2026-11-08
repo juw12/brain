@@ -46,3 +46,4 @@ Built as a free answer to the iOS game "Fin & Fern: Cozy Aquarium", in the same 
 
 See also: GitHub repos
 - 2026-11-08 - Flick Fishing mechanics added (v1.1.0, commit 1c81e39): swipe-to-cast, crank reel, tension vs fish strength with drag, 5 baits + 5 lures, line upgrades, tournaments vs CPU with hot-seat, 12 quests, photo album with trophy cards, #duel= challenge links. 2026-11-08 1250 riak flick fishing
+- 2026-11-08 - Depth pass v1.2.0 (commit 9b0a3d9), after Jeda: floating white cards with warm layered shadows, pill controls and floating nav, tank drawn as a glass box (perspective panes, receding floor, depth haze, fish floor shadows, rim, stand), fishing scenes with atmospheric perspective. 2026-11-08 1415 riak depth pass

@@ -40,6 +40,7 @@ publish: true
 - Direction D "dispatch console": dark #0E1114 / #161A1F, amber accent #F2B233, Manrope + JetBrains Mono. No emoji, no purple.
 - Won a 3-judge council bracket over three other directions; council-judged score 8.1.
 - Hone 2 (2026-11-08): group-first phone layout, labeled travel modes (Car / moto, Bike, Walk), same-block venue merge, plain stats ("Everyone arrives within X", "X combined") with a 0-30 min axis, one primary button per state, grayscale basemap, How it works + privacy note. Kept round 1: 6/6 simulated users would use it (mean 6.33 vs 5.83), council pair 2-0-1 over baseline. Rounds 2-3 not kept (failed the pairwise and bots keep rule).
+- Hone 4 (2026-11-08): Barlow Semi Condensed display face, result-first phone layout, initials on arrival dots, dimmed minor pins, "Midpoint only", collapsible How it works, share-link privacy note, higher-contrast muted grey, "First to last arrival" copy. Council 7.7 -> 7.8; simulated users 6/6 would use it (6.17). Rounds with a labelled fair zone scored 8.0 with judges but lower with simulated users, so they were not shipped. See 2026-11-08 2300 meetline hone 4.
 
 ## Venue details
 

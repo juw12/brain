@@ -11,7 +11,7 @@ repo: "https://github.com/juw12/lahap"
 visibility: public
 updated: 2026-11-08
 source: hone
-claim: "Built Lahap: an offline-first food diary PWA you can search (have I eaten this, where, for how much), with Strava-style share cards and taste-matched buds"
+claim: "Built Lahap: an offline-first food diary PWA you can search, with on-device food cut-outs (U-2-Net in the browser), nutrition estimates against a quiz-set goal, a Lab that turns typed/spoken/scanned ingredients into recipes, and Strava-style share cards"
 role: author
 evidence: [https://github.com/juw12/lahap, https://juw12.github.io/lahap/, https://juw12.github.io/p/lahap/]
 publish: true
@@ -25,7 +25,7 @@ publish: true
 - **Live:** https://juw12.github.io/lahap/ (add `?demo=1` for a sample fortnight)
 - **Landing:** https://juw12.github.io/p/lahap/
 - **Portfolio:** card on https://juwenlie.pages.dev/ (Apps)
-- **Language:** JavaScript (vanilla, IndexedDB, service worker, canvas share cards)
+- **Language:** JavaScript (vanilla, IndexedDB, service worker, canvas share cards, onnxruntime-web U-2-Net, tesseract.js, Web Speech)
 - **Started:** 2026-11-07 · **last push:** 2026-11-08
 
 ## What it is
@@ -35,15 +35,18 @@ Search answers "have I eaten this?" with count, last time and place, average pri
 Insights: variety score (Simpson diversity), plate score by day, spend split, taste radar, cuisines, top places.
 Share cards like Strava: Card / Receipt / Stats templates, Paper / Dark / Photo / Transparent backgrounds, Story 9:16 or Post 1:1.
 Taste buds: match % from taste profiles, tag buds in meals (+10), plan a hangout by WhatsApp, "We went" (+25), bud levels.
+Food-only photos (on-device cut-out), nutrition estimate + tips, Today bar vs goal, Lab recipes from typed / spoken /
+scanned ingredients, and a 5-step goal quiz (Mifflin-St Jeor).
 
 Built to beat PlateDiary (private restaurant photo journal) and Mynu (home-cooking journal), in the same family as
 [[GitHub/jeda]] (vs Sansa) and tally (share cards).
 
-Honest limits: plate score is a rule of thumb, not nutrition advice; buds are sample profiles on this device only (no server yet).
+Honest limits: nutrition is an estimate from typical portions, not medical advice; no dish recognition from photos;
+white food on white plates can be trimmed; buds are sample profiles on this device only (no server yet).
 
 ## Quality
 
-- 66/66 Playwright tests, slop_check 0 blockers / 0 warnings, app audit A1-A8 pass.
+- 128/128 Playwright tests (real cut-out + OCR runs), slop_check 0 blockers / 0 warnings, app audit A1-A8 pass.
 - /hone council (3 judges, frozen rubric): v0 7.85 -> r1 8.45 (kept) -> r3 shipped at 8.25 (same-session r1 re-score 8.20;
   r3 won 4 pairwise, lost 0). Plateau stop below the 8.5 target. r1 snapshot kept for rollback.
 
@@ -52,8 +55,12 @@ Honest limits: plate score is a rule of thumb, not nutrition advice; buds are sa
 - 2026-11-08: /hone + full sync: repo, profile README (Promising), landing page, portfolio card. 2026-11-08 1138 lahap hone
 - 2026-11-08: queue follow-ups shipped (`7a883e4`): phone diary meals-first, buds invite step + no fake 0% match, share-card plate logo + per-dish plates. 2026-11-08 1157 lahap queue
 
+- 2026-11-08: food-only photos, nutrition tips, Lab recipes, goal quiz (`7439c92`). 2026-11-08 2200 lahap photo nutrition lab quiz
+
 ## Next
 
-- Real-phone check: Add to Home Screen, camera photo, share-sheet PNG and Invite (needs Juwen's phone).
+- Real-phone check: Add to Home Screen, camera photo, cut-out speed, voice in Bahasa, share-sheet PNG (needs Juwen's phone).
+- Keep white sides (krupuk, cucumber, rice edge) when the plate is trimmed.
+- Indonesian OCR model for handwritten Bahasa lists.
 
 See also: GitHub repos
