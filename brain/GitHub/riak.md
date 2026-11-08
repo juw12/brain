@@ -45,3 +45,4 @@ Built as a free answer to the iOS game "Fin & Fern: Cozy Aquarium", in the same 
 - 2026-11-08: shipped v3 (repo + Pages), portfolio card, landing page /p/riak/, profile README entry under Games.
 
 See also: GitHub repos
+- 2026-11-08 - Flick Fishing mechanics added (v1.1.0, commit 1c81e39): swipe-to-cast, crank reel, tension vs fish strength with drag, 5 baits + 5 lures, line upgrades, tournaments vs CPU with hot-seat, 12 quests, photo album with trophy cards, #duel= challenge links. 2026-11-08 1250 riak flick fishing
