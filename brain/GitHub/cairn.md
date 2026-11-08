@@ -29,6 +29,7 @@ publish: true
 
 ## Changes
 
+- 2026-11-08: voice log round 4 merged ([PR #16](https://github.com/juw12/cairn/pull/16)): monthly review, weekly/monthly reviews offered when due, days that read alike, 30d/90d/All for On your mind, AudioWorklet capture, persistent live region, WCAG AA contrast and focus rings. Log: 2026-11-08 2330 cairn voice log 4
 - 2026-11-08: Vibe queue merged ([PR #15](https://github.com/juw12/cairn/pull/15)): outcome chips filter the session list (and act as the legend), days fold, "–" figures say why they're empty, and the desktop app records OpenCode sessions itself with a single-writer claim so the app, a startup watcher and a terminal never write together. Log: 2026-11-08 2345 cairn vibe queue
 - 2026-11-08: Vibe page at scale ([PR #14](https://github.com/juw12/cairn/pull/14), council 4.0 -> 8.8): time vibing is clock time (parallel agents count once), commit evidence from git for OpenCode sessions, day-grouped history with outcome dots and Show all, unclosed @media CSS bug fixed. Log: 2026-11-08 2200 cairn vibe scale hone
 - 2026-11-08: voice log round 3 merged ([PR #13](https://github.com/juw12/cairn/pull/13)): offline voice on the device (Vosk models per language, Chrome on-device engine, automatic takeover), spoken recall of any day, voice search, fuzzy wake word and search, 12-month heatmap, focus trap, mood-chip layout fix. Log: 2026-11-08 2030 cairn hone
