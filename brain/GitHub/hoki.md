@@ -11,7 +11,7 @@ repo: "https://github.com/juw12/hoki"
 visibility: public
 updated: 2026-11-08
 source: github-sync
-claim: "Built Hoki: a waving lucky cat (招财猫) for the phone home screen (PWA) and the Windows desktop (WPF widget)"
+claim: "Built Hoki: a waving lucky cat (招财猫) for the phone home screen (PWA + Android widget) and the Windows desktop (WPF widget)"
 role: author
 evidence: [https://github.com/juw12/hoki]
 publish: true
@@ -36,5 +36,6 @@ Inspired by the "tap for merit" apps (电子木鱼) and by Sansa (산사), the s
 
 - 2026-11-08: v2.0.2 calm Jeda/Sansa-style redesign replaces the retro pixel art: soft flat-vector calico cat with an engraved 福 koban, moon-gate scene whose sky follows the time of day, two-column desktop layout; Windows widget draws the same cat. /hone council 5.2 -> 8.3 (best), shipped v4 (won head-to-head vs v2). New portfolio card and landing page. - [commit](https://github.com/juw12/hoki/commit/e80ea3f) · 2026-11-08 1306 hoki hone
 - 2026-11-08: v2.2.1 /hone run 2: picture-book cat (parallel session's 5-step shading merged in), daily fortune slip, milestone toast under the cat (clear of the lanterns), quiet sound/buttons, warmer dark mode with a gold focus bar, simplified home-screen icon. Council: v5 8.0, v6 8.6 (best), v7 8.0 but won the pair vs v6 3-0, shipped v7 + merged cat. Gates 21/21, A1-A8. - [commit](https://github.com/juw12/hoki/commit/1967c39) · 2026-11-08 2115 hoki hone run 2 ship v2.2.1
+- 2026-11-08: v2.3.0/v2.3.1: Android home-screen widget (waving cat, tap for luck) built + released by GitHub Actions ([APK](https://github.com/juw12/hoki/releases/latest/download/hoki-widget.apk)), Phone widget panel on the site; H11 polish: centred desktop composition, one-row buttons, two-tier temple, legible tap feedback. Gates 27/27, A1-A8. - [commit](https://github.com/juw12/hoki/commit/47acbb3) · 2026-11-08 2345 hoki android widget + h11 v2.3.1
 
 See also: GitHub repos

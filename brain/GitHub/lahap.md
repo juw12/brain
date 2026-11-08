@@ -42,11 +42,11 @@ Built to beat PlateDiary (private restaurant photo journal) and Mynu (home-cooki
 [[GitHub/jeda]] (vs Sansa) and tally (share cards).
 
 Honest limits: nutrition is an estimate from typical portions, not medical advice; no dish recognition from photos;
-white food on white plates can be trimmed; buds are sample profiles on this device only (no server yet).
+food the exact tint of the plate can still be trimmed with it; buds are sample profiles on this device only (no server yet).
 
 ## Quality
 
-- 128/128 Playwright tests (real cut-out + OCR runs), slop_check 0 blockers / 0 warnings, app audit A1-A8 pass.
+- 132/132 Playwright tests (real cut-out + OCR runs), slop_check 0 blockers / 0 warnings, app audit A1-A8 pass.
 - /hone council (3 judges, frozen rubric): v0 7.85 -> r1 8.45 (kept) -> r3 shipped at 8.25 (same-session r1 re-score 8.20;
   r3 won 4 pairwise, lost 0). Plateau stop below the 8.5 target. r1 snapshot kept for rollback.
 
@@ -56,11 +56,11 @@ white food on white plates can be trimmed; buds are sample profiles on this devi
 - 2026-11-08: queue follow-ups shipped (`7a883e4`): phone diary meals-first, buds invite step + no fake 0% match, share-card plate logo + per-dish plates. 2026-11-08 1157 lahap queue
 
 - 2026-11-08: food-only photos, nutrition tips, Lab recipes, goal quiz (`7439c92`) + download progress (`025b11d`); landing, portfolio card and profile synced. 2026-11-08 2200 lahap photo nutrition lab quiz
+- 2026-11-08: plate trim keeps white sides - learns the plate tint from its rim (`376e031`, sw lahap-v5). 2026-11-08 2240 lahap white sides
 
 ## Next
 
 - Real-phone check: Add to Home Screen, camera photo, cut-out speed, voice in Bahasa, share-sheet PNG (needs Juwen's phone).
-- Keep white sides (krupuk, cucumber, rice edge) when the plate is trimmed.
 - Indonesian OCR model for handwritten Bahasa lists.
 
 See also: GitHub repos

@@ -32,5 +32,6 @@ publish: true
 ## Log
 - 2026-11-08: built and honed (council 8.1 -> 8.22, gates G1-G7 pass); judge-agreed fixes (cloth drape shader, folded thickness, felt lint, machine dials, layered skyline); made installable on desktop/iPhone (PWA) and Android (signed APK); published repo `3f11cb1`, profile Games entry `7ebd96d`, landing page, portfolio card.
 - 2026-11-08 (later): gestures (drag shirts from the basket into the drum, hold the bottle over the drawer to pour); native iOS build + simulator check + IPA release; iPhone audio (plays through the silent switch, resumes after calls); phone hint no longer blocks drags; Android emulator CI now reaches the room. Commits `fa1582c`, `ecf033e`. See 2026-11-08 1300 bilas gestures ios.
+- 2026-11-08 (night): hone r5-r6 shipped `90d8c2d` (live, sw bilas-v4): on-object step labels, printed-receipt ending with its own printer sound, clearcoat enamel + contact shadows, cloth fold shading/peg folds/backlight on the line, green cutting mat, quiet 'wait' mark. Council 7.92 -> 8.12, won both blind pairwise 3-0, plateau stop (under the +0.3 keep bar). See 2026-11-08 2245 bilas hone r5 r6.
 
 See also: GitHub repos

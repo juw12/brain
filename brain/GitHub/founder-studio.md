@@ -55,3 +55,7 @@ publish: true
 ## 2026-11-08 readable arena (hone, session J)
 - Commit 7505061 on top of the calm pass e99f165: buyer roster (hover/click), idle queue preview in two rows with a QUEUE sign, steeper camera with tidy BUY/PASS piles, amber thinking ring, "decided so far" HUD.
 - Council mean 7.98 on the merged tree (best round 8.33); target 8.5 not met. All gates A1-A8 pass.
+
+## 2026-11-08 paper theme + interactive square (hone v2)
+- Commits 8ac7871, 2ab09ba, Pages 71566ba: Cairn/Jeda paper theme with self-hosted fonts, warmer 3D square (paving, trees, benches, bunting, varied buyers), camera views, hover + click-to-inspect, after-run buyer spotlight.
+- Rubric v2 (style gates S1-S4 + A1-A8) all pass; council 8.5 (target 8.5). 2026-11-08 2247 founder-studio hone
