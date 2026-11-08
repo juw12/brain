@@ -26,7 +26,7 @@ publish: true
 - **Landing page:** https://juw12.github.io/p/founder-studio/
 - **Portfolio card:** https://juwenlie.pages.dev/
 - **Stack:** Python standard library server (`server.py`), three.js r160 front end, plain JS/HTML/CSS; optional OpenAI-compatible or Anthropic API for live panels
-- **Started:** 2026-11-07 · **last push:** 2026-11-07
+- **Started:** 2026-11-07 · **last push:** 2026-11-08
 
 ## How the online demo works
 
@@ -51,3 +51,7 @@ publish: true
 - 2026-11-08: review loop (reviewer bots critique and auto-fix the pitch, same buyers judge) + Graphite design pass 2026-11-08 0950 founder-studio hone
 
 - 2026-11-08: hone s5 calm UI pass shipped (`e99f165`): single stats strip, flat feed, no symbol glyphs, prices to 2 decimals. Council 8.07 to 8.55, pair tie. Substack post ready in juw12/portfolio#31 (needs login).
+
+## 2026-11-08 readable arena (hone, session J)
+- Commit 7505061 on top of the calm pass e99f165: buyer roster (hover/click), idle queue preview in two rows with a QUEUE sign, steeper camera with tidy BUY/PASS piles, amber thinking ring, "decided so far" HUD.
+- Council mean 7.98 on the merged tree (best round 8.33); target 8.5 not met. All gates A1-A8 pass.
