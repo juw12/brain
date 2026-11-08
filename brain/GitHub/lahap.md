@@ -46,7 +46,7 @@ food the exact tint of the plate can still be trimmed with it; buds are sample p
 
 ## Quality
 
-- 134/134 Playwright tests (real cut-out + OCR runs), slop_check 0 blockers / 0 warnings, app audit A1-A8 pass.
+- 138/138 Playwright tests (real cut-out + OCR runs), slop_check 0 blockers / 0 warnings, app audit A1-A8 pass.
 - /hone council (3 judges, frozen rubric): v0 7.85 -> r1 8.45 (kept) -> r3 shipped at 8.25 (same-session r1 re-score 8.20;
   r3 won 4 pairwise, lost 0). Plateau stop below the 8.5 target. r1 snapshot kept for rollback.
 
@@ -58,10 +58,10 @@ food the exact tint of the plate can still be trimmed with it; buds are sample p
 - 2026-11-08: food-only photos, nutrition tips, Lab recipes, goal quiz (`7439c92`) + download progress (`025b11d`); landing, portfolio card and profile synced. 2026-11-08 2200 lahap photo nutrition lab quiz
 - 2026-11-08: plate trim keeps white sides - learns the plate tint from its rim (`376e031`, sw lahap-v5). 2026-11-08 2240 lahap white sides
 - 2026-11-08: Bahasa list scanning with the Indonesian OCR model (`b1faa09`, sw lahap-v6); landing copy `2b1c82a`. 2026-11-08 2300 lahap bahasa ocr
+- 2026-11-08: Lab knows Indonesian bumbu; soto, kari, bacem and lodeh use them (`db0856e`, sw lahap-v7). 2026-11-08 2310 lahap bumbu
 
 ## Next
 
 - Real-phone check: Add to Home Screen, camera photo, cut-out speed, voice in Bahasa, share-sheet PNG (needs Juwen's phone).
-- Teach the Lab parser Indonesian spices and staples (serai, lengkuas, daun salam, terasi, kemiri).
 
 See also: GitHub repos
