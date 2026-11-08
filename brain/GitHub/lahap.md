@@ -43,18 +43,17 @@ Honest limits: plate score is a rule of thumb, not nutrition advice; buds are sa
 
 ## Quality
 
-- 63/63 Playwright tests, slop_check 0 blockers / 0 warnings, app audit A1-A8 pass.
+- 66/66 Playwright tests, slop_check 0 blockers / 0 warnings, app audit A1-A8 pass.
 - /hone council (3 judges, frozen rubric): v0 7.85 -> r1 8.45 (kept) -> r3 shipped at 8.25 (same-session r1 re-score 8.20;
   r3 won 4 pairwise, lost 0). Plateau stop below the 8.5 target. r1 snapshot kept for rollback.
 
 ## Log
 
 - 2026-11-08: /hone + full sync: repo, profile README (Promising), landing page, portfolio card. 2026-11-08 1138 lahap hone
+- 2026-11-08: queue follow-ups shipped (`7a883e4`): phone diary meals-first, buds invite step + no fake 0% match, share-card plate logo + per-dish plates. 2026-11-08 1157 lahap queue
 
 ## Next
 
-- Phone diary hierarchy: tickets above the fold, demote Share week and the bud nudge.
-- Buds onboarding: empty state and an "invite a real friend" step instead of the sample-profile caveat.
-- Share-card personality: bolder brand mark, plate motif varies per dish.
+- Real-phone check: Add to Home Screen, camera photo, share-sheet PNG and Invite (needs Juwen's phone).
 
 See also: GitHub repos
