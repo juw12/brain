@@ -42,3 +42,12 @@ Built as a free answer to Loftia (paid, Steam/console, account and shop). Same i
 - Not yet verified: together mode across two separate browsers on an outside network.
 
 See also: GitHub repos
+
+
+## v1.2.0 (2026-11-08): guide, character creator, realistic people
+- How to play guide (5 illustrated steps) before the first game; skippable, reopenable from the title and Settings.
+- Character creator with live 3D turntable: 14 choices (build, 5 heights, 3 face shapes, 8 skin tones, eyes, 10 hairstyles incl. hijab, hair colour, facial hair, 5 tops, 4 bottoms, cloth and shoe colours) plus 6 starting looks.
+- New procedural person (`js/character.js`): tapered limbs, deltoids, fingers, iris/pupil eyes with blinking lids, strand-textured hair, batik and sarong cloth. NPCs re-dressed (Sari hijab and sarong, Bayu jacket and beard, Lin batik).
+- Look saved with the island, sanitised on load and when friends arrive (`js/look.js`).
+- /hone v2 council: 4.4 -> 7.7 -> 7.8 (shipped) -> 7.5 (reverted). Target 8.5 not reached; stopped on a two-round plateau. Remaining asks: closer facial detail, hair at close range, guide art in the game's 3D style.
+- Tests 83/83. Commit cc47e49. Landing page 57ea8e1.
