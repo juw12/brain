@@ -11,7 +11,7 @@ repo: "https://github.com/juw12/portfolio"
 visibility: public
 updated: 2026-11-08
 source: hone
-claim: "Built an interactive portfolio site plus two browser games (Cozy Island, Townsquare 3D); Cozy Island plays on desktop and phones"
+claim: "Built an interactive portfolio site plus two browser games (Cozy Island, Townsquare 3D); Cozy Island plays on desktop and phones with a clean, emoji-free UI"
 role: author
 evidence: [https://github.com/juw12/portfolio, https://juw12.github.io/portfolio/game/, https://juw12.github.io/p/cozy-island/]
 publish: true
@@ -33,3 +33,4 @@ publish: true
   council score 5.5 -> 8.4. 2026-11-08 1130 cozy-island hone
 
 See also: GitHub repos
+- 2026-11-08: Cozy Island professional UI (theme Paper, one SVG icon set, no emoji, slimmer phone landscape sheet), PR #45 (`26bff4e`), spec in game/source/design.md. Council 5.8 -> 7.65.

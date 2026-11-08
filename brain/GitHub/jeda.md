@@ -36,5 +36,6 @@ Terinspirasi oleh "Sansa" (산사), kuil virtual dari Korea. Dibuat oleh [juw12]
 ## Updates
 
 - 2026-11-08: v1.7.2 legible glass controls (white labels 5.07:1 on white, 24px+ targets, hint no longer covers the area switch) - [commit](https://github.com/juw12/jeda/commit/f48a0ac0e2c53641793d8615da1aae25ccdb9510) · 2026-11-08 1154 jeda hone
+- 2026-11-08: v1.7.3 NPC name tags and bubbles stay on screen (slide in at edges, shrink to fit on phones) - [commit](https://github.com/juw12/jeda/commit/cd38c21) · 2026-11-08 1405 jeda labels and bilas sync
 
 See also: GitHub repos

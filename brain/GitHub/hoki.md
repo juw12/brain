@@ -35,5 +35,6 @@ Inspired by the "tap for merit" apps (电子木鱼) and by Sansa (산사), the s
 ## Updates
 
 - 2026-11-08: v2.0.2 calm Jeda/Sansa-style redesign replaces the retro pixel art: soft flat-vector calico cat with an engraved 福 koban, moon-gate scene whose sky follows the time of day, two-column desktop layout; Windows widget draws the same cat. /hone council 5.2 -> 8.3 (best), shipped v4 (won head-to-head vs v2). New portfolio card and landing page. - [commit](https://github.com/juw12/hoki/commit/e80ea3f) · 2026-11-08 1306 hoki hone
+- 2026-11-08: v2.2.1 /hone run 2: picture-book cat (parallel session's 5-step shading merged in), daily fortune slip, milestone toast under the cat (clear of the lanterns), quiet sound/buttons, warmer dark mode with a gold focus bar, simplified home-screen icon. Council: v5 8.0, v6 8.6 (best), v7 8.0 but won the pair vs v6 3-0, shipped v7 + merged cat. Gates 21/21, A1-A8. - [commit](https://github.com/juw12/hoki/commit/1967c39) · 2026-11-08 2115 hoki hone run 2 ship v2.2.1
 
 See also: GitHub repos
