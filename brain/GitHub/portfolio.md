@@ -34,3 +34,4 @@ publish: true
 
 See also: GitHub repos
 - 2026-11-08: Cozy Island professional UI (theme Paper, one SVG icon set, no emoji, slimmer phone landscape sheet), PR #45 (`26bff4e`), spec in game/source/design.md. Council 5.8 -> 7.65.
+- 2026-11-08: Cozy Island UI round 4, PR #46 (`3c13eaa`): compact phone landscape (More toggle, corner panels), one panel per activity, clearer tool states. Council 7.65 -> 7.78.
