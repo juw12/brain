@@ -9,7 +9,7 @@ tags:
   - public
 repo: "https://github.com/juw12/cairn"
 visibility: public
-updated: 2026-11-06
+updated: 2026-11-08
 source: github-sync
 claim: "Built cairn: A second brain that lives inside your repo"
 role: author
@@ -19,13 +19,17 @@ publish: true
 
 # cairn
 
-> A second brain that lives inside your repo: capture, brainstorm, decide and ship as plain Markdown next to your code. Ideas wall, task board, decision log, code TODO inbox, AI context pack. Zero dependencies.
+> A second brain that lives inside your repo: capture, brainstorm, decide and ship as plain Markdown next to your code. Ideas wall, task board, decision log, a daily voice log (works offline, on the device) with a 12-month journal, AI context pack. Zero dependencies.
 
 - **Repo:** https://github.com/juw12/cairn (public)
 - **Live:** https://juw12.github.io/cairn/
 - **Language:** Python
-- **Topics:** adr, cairn-brain, git, kanban, local-first, markdown, notes, obsidian, pwa, second-brain, zero-dependencies
-- **Started:** 2026-11-05 · **last push:** 2026-11-06
+- **Topics:** adr, cairn-brain, git, journal, kanban, local-first, markdown, notes, obsidian, pwa, second-brain, speech-recognition, voice-notes, zero-dependencies
+- **Started:** 2026-11-05 · **last push:** 2026-11-08
+
+## Changes
+
+- 2026-11-08: voice log round 3 merged ([PR #13](https://github.com/juw12/cairn/pull/13)): offline voice on the device (Vosk models per language, Chrome on-device engine, automatic takeover), spoken recall of any day, voice search, fuzzy wake word and search, 12-month heatmap, focus trap, mood-chip layout fix. Log: 2026-11-08 2030 cairn hone
 
 ## From the README
 
