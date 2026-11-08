@@ -55,7 +55,7 @@ white food on white plates can be trimmed; buds are sample profiles on this devi
 - 2026-11-08: /hone + full sync: repo, profile README (Promising), landing page, portfolio card. 2026-11-08 1138 lahap hone
 - 2026-11-08: queue follow-ups shipped (`7a883e4`): phone diary meals-first, buds invite step + no fake 0% match, share-card plate logo + per-dish plates. 2026-11-08 1157 lahap queue
 
-- 2026-11-08: food-only photos, nutrition tips, Lab recipes, goal quiz (`7439c92`). 2026-11-08 2200 lahap photo nutrition lab quiz
+- 2026-11-08: food-only photos, nutrition tips, Lab recipes, goal quiz (`7439c92`) + download progress (`025b11d`); landing, portfolio card and profile synced. 2026-11-08 2200 lahap photo nutrition lab quiz
 
 ## Next
 

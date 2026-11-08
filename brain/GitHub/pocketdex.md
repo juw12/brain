@@ -40,5 +40,6 @@ All 1025 Pokémon, sprites and fonts are bundled; no account, progress stays in 
   Portfolio card, landing page and profile entry added. - [commit](https://github.com/juw12/pocketdex/commit/e08a646) · 2026-11-08 1209 pocketdex hone
 - 2026-11-08: Today gets one clear Next step strip; meadow gains clouds, butterflies, pond ripples and idle hops. e2e 159/159. - [commit](https://github.com/juw12/pocketdex/commit/229d874) · 2026-11-08 1950 pocketdex next step meadow
 - 2026-11-08: Focus becomes a partner vs wild battle; floating focus widget on every page and a pop-out timer; fixed Pause (stacked listeners). - [commit](https://github.com/juw12/pocketdex/commit/a1a2523) · 2026-11-08 2046 pocketdex focus battle widget
+- 2026-11-08: phone focus widget: floating mini player (Picture-in-Picture) with the live battle animation, keep-screen-on, lock-screen notice. - [commit](https://github.com/juw12/pocketdex/commit/2504bed) · 2026-11-08 2207 pocketdex phone focus widget
 
 See also: GitHub repos

@@ -51,3 +51,13 @@ See also: GitHub repos
 - Look saved with the island, sanitised on load and when friends arrive (`js/look.js`).
 - /hone v2 council: 4.4 -> 7.7 -> 7.8 (shipped) -> 7.5 (reverted). Target 8.5 not reached; stopped on a two-round plateau. Remaining asks: closer facial detail, hair at close range, guide art in the game's 3D style.
 - Tests 83/83. Commit cc47e49. Landing page 57ea8e1.
+
+
+## v1.3.0 (2026-11-08): clean UI polish, in-game guide pictures, face detail
+- HUD and panels: translucent glass cards, labelled camera controls (Turn/Zoom), goal progress bar, gear Settings icon, scroll fade only when a panel actually scrolls.
+- Item icons (`js/icons.js`, tinted per item), Bag grouped by kind with what each item grows into, sells for or is used for; Workbench recipe cards with All/Ready filter, need chips (check or "have N") and energy cost.
+- How to play guide now uses real renders of the game world (5 WebP, 15-17 KB each, cached offline), re-rendered by `tests/guide_shots.py`.
+- Faces: single-bridge nose, cheek blush, arched brows, cupid's-bow lips.
+- /hone round 3 council: 7.42 (baseline, fixed instrument) -> 7.85 -> 8.0 (kept, pair 3-0) -> 8.0 / 7.85 (reverted). Target 8.5 not reached; stopped on a two-round plateau.
+- Tests 86/86 (adds rendered emoji check, workbench WCAG AA contrast, guide picture check). Play-together verified across two browsers 5/5.
+- Commit f6ad5c5, landing 40e22d9. Live verified v1.3.0, no console errors.
