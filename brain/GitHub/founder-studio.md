@@ -49,3 +49,5 @@ publish: true
 
 - 2026-11-08: live demo, portfolio card, landing page, profile README entry 2026-11-08 0320 founder-studio live demo card landing
 - 2026-11-08: review loop (reviewer bots critique and auto-fix the pitch, same buyers judge) + Graphite design pass 2026-11-08 0950 founder-studio hone
+
+- 2026-11-08: hone s5 calm UI pass shipped (`e99f165`): single stats strip, flat feed, no symbol glyphs, prices to 2 decimals. Council 8.07 to 8.55, pair tie. Substack post ready in juw12/portfolio#31 (needs login).
