@@ -48,3 +48,4 @@ publish: true
 ## Log
 
 - 2026-11-08: live demo, portfolio card, landing page, profile README entry 2026-11-08 0320 founder-studio live demo card landing
+- 2026-11-08: review loop (reviewer bots critique and auto-fix the pitch, same buyers judge) + Graphite design pass 2026-11-08 0950 founder-studio hone
