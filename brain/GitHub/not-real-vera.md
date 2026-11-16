@@ -27,7 +27,7 @@ publish: true
 - **Portfolio:** https://juwenlie.pages.dev/ (card live; status field says "released" by tool default, nothing posted)
 - **Language:** Python (Pillow, ffmpeg, local Kokoro voice), one static HTML page
 - **Topics:** ai-avatar, scam-awareness, short-video, buffer, python
-- **Started:** 2026-11-14 - **last push:** 2026-11-16 (`9461780`, wardrobe)
+- **Started:** 2026-11-14 - **last push:** 2026-11-16 (`1399814`, younger presenter, camera, captions, sound)
 - **Working copy:** `C:\Users\juwen_lie\.vector\scratch\session_mweyunfw7jqcw0v\not-real-vera` (scratch folder, move it to keep it)
 
 ## What it is
@@ -44,7 +44,7 @@ request (below) the videos no longer say she is an AI. Each 35-45 second episode
 - `pipeline/make_episode.py` renders 1080x1920 video with voice, captions and sound cues.
 - `pipeline/autopost.py` schedules through Buffer: `check`, `approve`, `publish`, `post` (dry run),
   `post --live`. An episode is never posted without an approval file.
-- `tools/gates.py`: nine pass/fail checks on scripts and renders.
+- `tools/gates.py`: ten pass/fail checks on scripts and renders.
 
 ## Status (2026-11-14)
 
@@ -97,9 +97,48 @@ cleavage too and other elements of captivating one".
 - Sync state: pushed to GitHub as `9461780` on 2026-11-16 at 10:55. The outfit pictures are now public
   in the repo. Profile README, portfolio card and landing page were not changed.
 
+## Fourth request (2026-11-16): younger presenter, camera motion, synced captions, sound
+
+Ask: "make the girl young, not that old, like range 18 to 30, make it very beautiful so can be clickbait,
+also the movement must be very fluid and the caption must be in sync, sound must also be captivating, do
+camera motion without gpu, make it not ai flag if possible".
+
+- Done: new base portrait and five new outfit stills (prompt says aged twenty-seven; she reads late
+  twenties and clearly adult). `pipeline/camera.py` adds CPU-only depth parallax with a spring-smoothed
+  camera plus slight breathing and head sway. `pipeline/word_timing.py` times every caption word from the
+  voice track (Vosk forced alignment). `pipeline/sound.py` adds a synthesised music bed, ducking, voice
+  polish, stereo, -14 LUFS.
+- Numbers (all five re-rendered, h264 1080x1920 30 fps, AAC 48 kHz stereo): 36.93-41.11 s, 7.98-9.42 MB,
+  every caption word timed from the voice (112, 124, 117, 116, 123 words), loudness -14.00 to -14.01 LUFS,
+  true peak -1.03 to -1.31 dBTP, camera step at most 1.35-1.67 px per frame. The old even-spacing caption
+  guess was off by 0.09-0.15 s on average and up to 0.50 s.
+- Found and fixed: ep01 true peak was -0.72 dBTP (now -1.03). All five music beds had the same tempo and
+  three shared a key (now five tempos, 92-104 bpm, and five keys). ep05 had one caption word ("3" in
+  "I C 3 dot gov") that the aligner could not place, 122 of 123; digits are now matched as spoken words,
+  123 of 123.
+- Checks: unit tests 23 passed; gates 10/10 with the link check (one link failed once on the proxy and
+  passed on re-run). One contact sheet per episode viewed.
+- Not as asked: the ducking effect is small (music rises only 1.4-3.5 dB between spoken lines). ep02 is
+  velvet, not satin. ep03 is a one-piece cream scoop-neck dress and ep04 a full-length emerald wrap blouse,
+  because the Horde safety filter blanked both as crop tops and fabric was added instead of rerolling.
+  Seed 58 was blanked too; seed 611 was kept (204 had merged fingers, 27 a smaller face).
+- **Still not done: lip sync, expression, gestures.** The motion is camera, parallax, breathing and sway
+  on a still picture. Real lip sync needs a GPU or a paid avatar tool.
+- Not verified: no video was watched end to end and no audio was listened to; only still frames and
+  measurements.
+- Kept: platform AI flag ON (`isAiGenerated` in `pipeline/autopost.py`). YouTube, TikTok and Meta require
+  the label for realistic synthetic people; leaving it off risks removal or a strike, and no trick to dodge
+  AI detection was added. It is Juwen's setting to change.
+- Risk (Juwen's call): suggestive styling on a scam-defence channel can cost trust and limit reach.
+- Render cost: about 8-16 minutes per episode on this PC. Three at once crashed on memory, so at most two.
+- Sync state: pushed to GitHub as `1399814` on 2026-11-16 at 15:20. The new pictures are public in the
+  repo. Profile README, portfolio card and landing page were not changed. Nothing posted.
+
 ## Needs Juwen
 
 - Watch and approve each episode.
 - Check the handle `@verachecks`, create the three accounts, connect them in Buffer (3 free slots).
 - Put the Buffer API key in `~\.notrealvera\buffer_key.txt`, then run `check`, `approve`, `publish`, `post`.
 - Decide if the glamour styling fits a trust channel (the pictures are public in the repo now).
+- Watch one episode with sound on: nobody has heard the new music bed or seen the motion play.
+- Decide the AI flag yourself (it is ON), and whether to pay for an avatar tool or use a GPU for real lip sync.
