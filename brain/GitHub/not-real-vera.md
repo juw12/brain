@@ -27,7 +27,7 @@ publish: true
 - **Portfolio:** https://juwenlie.pages.dev/ (card live; status field says "released" by tool default, nothing posted)
 - **Language:** Python (Pillow, ffmpeg, local Kokoro voice), one static HTML page
 - **Topics:** ai-avatar, scam-awareness, short-video, buffer, python
-- **Started:** 2026-11-14 - **last push:** 2026-11-16 (`1399814`, younger presenter, camera, captions, sound)
+- **Started:** 2026-11-14 - **last push:** 2026-11-16 (`2e55e5d`, short text, word-by-word captions, rule-based lip-sync)
 - **Working copy:** `C:\Users\juwen_lie\.vector\scratch\session_mweyunfw7jqcw0v\not-real-vera` (scratch folder, move it to keep it)
 
 ## What it is
@@ -134,11 +134,39 @@ camera motion without gpu, make it not ai flag if possible".
 - Sync state: pushed to GitHub as `1399814` on 2026-11-16 at 15:20. The new pictures are public in the
   repo. Profile README, portfolio card and landing page were not changed. Nothing posted.
 
+## Fifth request (2026-11-16): short text, live captions with lip-sync, a picture that moves
+
+Ask: "dont write long text on the video, make it live text lip sync, also the picture must move, not
+stationary".
+
+- Done: no on-screen item is longer than 26 characters or 5 words (longest: "SEND THIS TO YOUR PARENTS").
+  The four-line scam card and the sentence card are gone; the scam's wording is spoken. Captions appear
+  word by word as spoken, at most 3 words, newest word in the accent colour.
+- Done: her mouth, eyelids, eyebrows and head now move. `pipeline/lipsync.py` turns each word's sounds
+  into mouth shapes; `pipeline/face_rig.py` draws them by warping the still around 98 face landmarks.
+  `pipeline/camera.py` adds a jump cut at every line, larger drift and a sign-off push-in.
+- Numbers (all five re-rendered): mouth-to-voice correlation 0.595-0.654 with best shift 0 frames, 29-37
+  lip closures and 10-12 blinks per episode. Average picture change per frame 0.338-0.394 before and
+  0.701-0.747 after. Quietest second 0.026-0.073 before and 0.231-0.455 after. Cuts 2-3 before, 9-10 after.
+- Found and fixed: in the first version ep03's quietest second was the end card (0.141, under the 0.15
+  gate). A sign-off push-in fixed it (now 0.231); the gate was not loosened.
+- Checks: gates 14/14 with the link check; unit tests 51 passed. One contact sheet per episode viewed.
+- **Not as asked: this is rule-based mouth warping on a photo, not a neural talking-head model.** Wav2Lip
+  weights could not be downloaded on the work network and SadTalker did not finish four frames in 5.5
+  minutes on this PC. Hands and body do not move, the head cannot turn, the open mouth is a dark crescent
+  under static upper teeth, and the blink is a flat painted lid.
+- Not verified: no video was watched end to end and no audio was listened to. The lip-sync numbers come
+  from a mouth the voice itself drives, so they check timing, not how real it looks.
+- Kept: platform AI flag ON. Nothing posted.
+- Render cost: about 10-12 minutes per episode with two at once; 23 minutes when the PC was busy.
+- Sync state: pushed to GitHub as `2e55e5d` on 2026-11-16 at 19:25. Profile README, portfolio card and
+  landing page were not changed.
+
 ## Needs Juwen
 
 - Watch and approve each episode.
 - Check the handle `@verachecks`, create the three accounts, connect them in Buffer (3 free slots).
 - Put the Buffer API key in `~\.notrealvera\buffer_key.txt`, then run `check`, `approve`, `publish`, `post`.
 - Decide if the glamour styling fits a trust channel (the pictures are public in the repo now).
-- Watch one episode with sound on: nobody has heard the new music bed or seen the motion play.
+- Watch one episode with sound on: nobody has heard the music bed or seen the lip-sync and motion play.
 - Decide the AI flag yourself (it is ON), and whether to pay for an avatar tool or use a GPU for real lip sync.
