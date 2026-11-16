@@ -44,6 +44,10 @@ printed on the page, and each result can open the arithmetic behind its position
 - In the browser: an install button where the browser offers one, address-bar search (OpenSearch), a place
   in the Android share sheet once installed. Tested in Chrome 157 and Firefox 150.0.2.
 - Optional Stack Exchange key field in Settings (the key stays in the browser).
+- Browser extension (optional, in `extension/`, Chrome, Edge and Firefox): Telisik as the new tab page,
+  the address-bar keyword `tk`, right-click "Search Telisik" on selected text, and a toolbar button
+  (Alt+Shift+K). One permission (`contextMenus`), no site access. Loaded by hand from the repo; not in
+  the Chrome Web Store or addons.mozilla.org.
 
 The niche: web results crowded with pages written to rank and sell (Bevendorff et al., ECIR 2024) and
 answer engines whose citations often do not check out (Liu, Zhang, Liang 2023; Tow Center / CJR, March 2025).
@@ -51,7 +55,14 @@ Telisik only asks places with no shop window and prints only what a source wrote
 
 ## Quality
 
-State on 2026-11-16 (app commit `1ce489d`).
+State on 2026-11-16 (app commit `858db79`; the page itself is unchanged since `1ce489d`).
+
+- Extension, measured 2026-11-16 with `tools/extension_e2e.py`: 27/27 in bundled Chromium 148.0.7778.96,
+  27/27 in Chrome 157.0.8103.78, 24/24 in Firefox 150.0.2 (Playwright's build; no system Firefox is
+  installed). node tests now 159/159. Not robot-tested: really typing `tk` in the address bar, the real
+  right-click menu, the Alt+Shift+K key press and the real toolbar bubble (they need OS-level input);
+  their registration is checked in the browser and the handler code is called directly. Edge not tested.
+- The numbers below are from `1ce489d`, before the extension was added.
 
 - node tests 146/146. Functional 67/67 in Chrome 157.0.8103.78 and 67/67 in Firefox 150.0.2. Full run with
   the visual matrix 445/445 at `d932892` on Chrome 157 (not re-run after two small follow-up commits that
@@ -78,8 +89,9 @@ State on 2026-11-16 (app commit `1ce489d`).
 
 - Not the best search engine overall. It is the best I could find for one narrow job: free, no account, ads
   or tracking, one query across 23 public libraries, verbatim quotes only, ranking arithmetic on show.
-- It is a page, not a browser. Chromium and Firefox are what it runs in, so it cannot beat them; it installs
-  from them and plugs into their address bar and share sheet.
+- It is a page plus an extension, not a browser. Chromium and Firefox are what it runs in, so it cannot
+  beat them; it installs from them and plugs into their new tab page, address bar, right-click menu,
+  toolbar and share sheet. On a real new tab the cursor starts in the address bar (a browser rule).
 - The test favours Telisik by construction: every right answer is a page inside a library it searches
   (mostly Wikipedia). The sets were written by an AI assistant and 50 unseen queries is a small sample.
 - Google, Bing, ChatGPT and Perplexity were not measured: their terms forbid automated queries.
@@ -94,7 +106,10 @@ State on 2026-11-16 (app commit `1ce489d`).
 - Free API quotas are per visitor IP (Stack Exchange about 300 a day, GitHub about 10 a minute). The key
   field in Settings raises the Stack Exchange quota (about 10,000 a day per Stack Exchange's documentation);
   each user has to register a key himself, none is shipped.
-- Not published as a store extension; the GitHub token field was left out on purpose.
+- The extension is not in the Chrome Web Store or addons.mozilla.org: both need a developer account in
+  Juwen's own name (Chrome's has a one-time registration fee, Firefox needs Mozilla signing). The zips are
+  built by `tools/pack_extension.py` into `dist/`. In Firefox it loads as a temporary add-on that
+  disappears when Firefox closes. The GitHub token field was left out on purpose.
 - Income today is 0. Two hooks exist in `js/config.js` (support link, one labelled footer sponsor line);
   both are empty and need a payment account in Juwen's own name.
 - The name got a web check only, not trademark clearance: nine small GitHub repos, a dance programme and
@@ -106,3 +121,4 @@ State on 2026-11-16 (app commit `1ce489d`).
 - 2026-11-14: limits pass - 8 to 20 sources, measured ranking, saved copies, quota notes, Hacker News dedupe fix - [commit](https://github.com/juw12/telisik/commit/41fb9c2) · 2026-11-14 1339 sumber limits
 - 2026-11-14: quality pass and rename to Telisik - 23 sources, blind test set, head-to-head table, new URLs - [commit](https://github.com/juw12/telisik/commit/a8db7c7) · 2026-11-14 1751 telisik quality rename
 - 2026-11-16: leftovers and browser integration - install, address-bar search, share target, Stack Exchange key, third question set, GitHub follow-up fault shown - [commit](https://github.com/juw12/telisik/commit/d932892) · [commit](https://github.com/juw12/telisik/commit/6d6ed0a) · [commit](https://github.com/juw12/telisik/commit/1ce489d) · 2026-11-16 1109 telisik leftovers browser
+- 2026-11-16: browser extension - new tab page, address-bar keyword `tk`, right-click search, toolbar button - [commit](https://github.com/juw12/telisik/commit/858db79) · 2026-11-16 1313 telisik browser extension
