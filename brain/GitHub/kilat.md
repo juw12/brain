@@ -9,9 +9,9 @@ tags:
   - public
 repo: "https://github.com/juw12/kilat"
 visibility: public
-updated: 2026-11-12
+updated: 2026-11-16
 source: hone
-claim: "Built Kilat: a small statically typed scripting language with units of measure and a fuel-and-memory sandbox, written from scratch in Rust with zero dependencies; it runs as a CLI, as a WebAssembly playground in the browser and as a Cairn plugin, refused 20 of 20 seeded bugs before running, and version 0.2.0 measured 3.1x CPython's speed across 10 benchmarks (about level on strings, 5x target not met)"
+claim: "Built Kilat: a small statically typed scripting language with units of measure and a fuel-and-memory sandbox, written from scratch in Rust with zero dependencies; it runs as a CLI, as a WebAssembly playground in the browser and as a Cairn plugin, refused 20 of 20 seeded bugs before running, and version 0.2.3 measured 3.06x CPython 3.13's speed on CPU time across 10 benchmarks on one Windows PC (2.49x with start-up taken out, 5x target not met)"
 role: author
 evidence: [https://github.com/juw12/kilat, https://juw12.github.io/kilat/, https://github.com/juw12/kilat/blob/main/RESULTS.md]
 publish: true
@@ -187,3 +187,13 @@ metres to seconds is refused instead of printing a wrong number. Programs run in
 - Kilat has not been shown to beat Python overall.
 - Next: install in my Cairn, independent evidence, clean-PC install, speed to 3x net, checker messages that name the line, model sample with fresh answers.
 - kilat commit `ff77abf` (log only, CI skipped), last CI-checked commit `0fc6052`.
+
+## Round 8 sync (2026-11-16)
+
+- The profile, the portfolio card and the landing page still said 0.2.1 (the sync had been skipped for 0.2.2 and 0.2.3). All three now say 0.2.3.
+- Profile: https://github.com/juw12/juw12/commit/82247a75050c3cba7db0065c54273a2364214842
+- Card: catalogue https://github.com/juw12/projects/commit/6ff2ef92396d75d16c2c132ca25c7a17371f915b, card commit `06aff894cb` in juw12/portfolio. Live at https://juwenlie.pages.dev/ and https://juw12.github.io/portfolio/ (both 200, new text shown, no "0.2.1").
+- Landing: https://github.com/juw12/juw12.github.io/commit/7f58b0487c088b3684025dbb551704e010631643 and https://github.com/juw12/juw12.github.io/commit/e0a31b73b6b390328af1735a7013f4a05c56099c. Live at https://juw12.github.io/p/kilat/ (200, equal byte for byte to the landing tool's build).
+- Landing tool data updated for Kilat only, backups kept. Details: 2026-11-16 2018 kilat round 8.
+- The `claim:` line of this note now carries the 0.2.3 numbers.
+- kilat commit `cc57282` (log only, CI skipped) is now the last commit; 31 commits.
