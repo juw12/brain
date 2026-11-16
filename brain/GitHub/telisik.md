@@ -55,13 +55,17 @@ Telisik only asks places with no shop window and prints only what a source wrote
 
 ## Quality
 
-State on 2026-11-16 (app commit `858db79`; the page itself is unchanged since `1ce489d`).
+State on 2026-11-16 (app commit `bfed69d`; the page itself is unchanged since `1ce489d`).
 
-- Extension, measured 2026-11-16 with `tools/extension_e2e.py`: 27/27 in bundled Chromium 148.0.7778.96,
-  27/27 in Chrome 157.0.8103.78, 24/24 in Firefox 150.0.2 (Playwright's build; no system Firefox is
-  installed). node tests now 159/159. Not robot-tested: really typing `tk` in the address bar, the real
-  right-click menu, the Alt+Shift+K key press and the real toolbar bubble (they need OS-level input);
-  their registration is checked in the browser and the handler code is called directly. Edge not tested.
+- Extension, robot checks, measured 2026-11-16 with `tools/extension_e2e.py`: 28/28 in bundled Chromium
+  148.0.7778.96, in Chrome 157.0.8103.78 and in Edge 157.0.4341.46; 25/25 in Firefox 150.0.2
+  (Playwright's build; no system Firefox is installed). node tests 160/160.
+- Extension, real keyboard and mouse, measured 2026-11-16 with `tools/extension_real_input.py` (Ctrl+T,
+  `tk` typed in the address bar, the real right-click menu, Alt+Shift+K, the real toolbar button): Chrome
+  157.0.8103.78 25/25, Edge 157.0.4341.46 25/25, Firefox 150.0.2 (Playwright's build) 24/26. The two
+  Firefox misses: the bubble takes no typing until one click in its box; the bubble says so in Firefox.
+- Not tested: the Firefox that Mozilla releases, the live site behind the extension with real input, an
+  extension installed from a store.
 - The numbers below are from `1ce489d`, before the extension was added.
 
 - node tests 146/146. Functional 67/67 in Chrome 157.0.8103.78 and 67/67 in Firefox 150.0.2. Full run with
@@ -91,7 +95,8 @@ State on 2026-11-16 (app commit `858db79`; the page itself is unchanged since `1
   or tracking, one query across 23 public libraries, verbatim quotes only, ranking arithmetic on show.
 - It is a page plus an extension, not a browser. Chromium and Firefox are what it runs in, so it cannot
   beat them; it installs from them and plugs into their new tab page, address bar, right-click menu,
-  toolbar and share sheet. On a real new tab the cursor starts in the address bar (a browser rule).
+  toolbar and share sheet. On a real new tab the cursor starts in the address bar in Chrome, Edge and
+  Firefox (measured). Each browser asks once whether to keep the new tab page.
 - The test favours Telisik by construction: every right answer is a page inside a library it searches
   (mostly Wikipedia). The sets were written by an AI assistant and 50 unseen queries is a small sample.
 - Google, Bing, ChatGPT and Perplexity were not measured: their terms forbid automated queries.
@@ -122,3 +127,4 @@ State on 2026-11-16 (app commit `858db79`; the page itself is unchanged since `1
 - 2026-11-14: quality pass and rename to Telisik - 23 sources, blind test set, head-to-head table, new URLs - [commit](https://github.com/juw12/telisik/commit/a8db7c7) · 2026-11-14 1751 telisik quality rename
 - 2026-11-16: leftovers and browser integration - install, address-bar search, share target, Stack Exchange key, third question set, GitHub follow-up fault shown - [commit](https://github.com/juw12/telisik/commit/d932892) · [commit](https://github.com/juw12/telisik/commit/6d6ed0a) · [commit](https://github.com/juw12/telisik/commit/1ce489d) · 2026-11-16 1109 telisik leftovers browser
 - 2026-11-16: browser extension - new tab page, address-bar keyword `tk`, right-click search, toolbar button - [commit](https://github.com/juw12/telisik/commit/858db79) · 2026-11-16 1313 telisik browser extension
+- 2026-11-16: extension tested with real keyboard and mouse - Chrome 25/25, Edge 25/25, Playwright Firefox 24/26, Firefox bubble hint, Edge robot run - [commit](https://github.com/juw12/telisik/commit/bfed69d) · 2026-11-16 1731 telisik real input tests
