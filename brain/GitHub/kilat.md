@@ -174,3 +174,16 @@ metres to seconds is refused instead of printing a wrong number. Programs run in
 - Still not verified: `install.cmd` on 0.2.2, full Cairn suite on Windows Python 3.13.2, speed goals (3x net, 5x whole), hone score 7.61 self-judged against 8.5 with an outside judge, model samples are not independent.
 - Next (0.2.3, not started): show the entered unit for a unit-less placeholder or give a hint, record refusal messages in the sample, make the Run click robust, bigger held-out set.
 - kilat commit `94690f4`, CI green.
+
+## Round 8 (2026-11-13 to 2026-11-16)
+
+- Kilat 0.2.3 released and installed on my PC (0.2.1 -> 0.2.3). A value with a unit is shown only in a unit the program names (breaking change). Unit hints 75 of 75.
+- Cairn PR 42 and GlowCode PR 80 merged. Live GlowCode files are byte-identical to the committed ones. App checks on GitHub: live page 9 of 9 three times, Cairn plugin on Windows 8 of 8 three times, on Ubuntu 8 of 8 once after two failures.
+- Speed against CPython 3.13.2: my PC 3.06x whole and 2.49x net of start-up. GitHub, 18 reports: whole 2.78x to 3.19x, net 2.70x to 3.13x, 11 of 18 reached 3x. No real gain over 0.2.2 except `map_count`.
+- Model sample: main 30 of 30, held-out 39 of 42. 39 of 72 answers came back in under 3 s (replays), and the check reads numbers only.
+- Hone council 7.34 (v0 5.15, target 8.5 not reached), gates 5 of 5.
+- Kilat is still not installed in my own Cairn. Manual: Cairn -> Plugins -> turn on community plugins -> Install on the Kilat card.
+- Still not verified: full Cairn suite on Windows on my PC, clean-PC install and browser download, a bug set and a repeat by another person, speed goals (3x net, 5x), independent model answers, causes of the low Linux report, the low `sieve` figure and the red `verify_review.py` run.
+- Kilat has not been shown to beat Python overall.
+- Next: install in my Cairn, independent evidence, clean-PC install, speed to 3x net, checker messages that name the line, model sample with fresh answers.
+- kilat commit `ff77abf` (log only, CI skipped), last CI-checked commit `0fc6052`.
