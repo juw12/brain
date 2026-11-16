@@ -55,7 +55,7 @@ Telisik only asks places with no shop window and prints only what a source wrote
 
 ## Quality
 
-State on 2026-11-16 (app commit `bfed69d`; the page itself is unchanged since `1ce489d`).
+State on 2026-11-16 (app commit `7ba74e2`; the page itself is unchanged since `1ce489d`).
 
 - Extension, robot checks, measured 2026-11-16 with `tools/extension_e2e.py`: 28/28 in bundled Chromium
   148.0.7778.96, in Chrome 157.0.8103.78 and in Edge 157.0.4341.46; 25/25 in Firefox 150.0.2
@@ -64,8 +64,20 @@ State on 2026-11-16 (app commit `bfed69d`; the page itself is unchanged since `1
   `tk` typed in the address bar, the real right-click menu, Alt+Shift+K, the real toolbar button): Chrome
   157.0.8103.78 25/25, Edge 157.0.4341.46 25/25, Firefox 150.0.2 (Playwright's build) 24/26. The two
   Firefox misses: the bubble takes no typing until one click in its box; the bubble says so in Firefox.
-- Not tested: the Firefox that Mozilla releases, the live site behind the extension with real input, an
-  extension installed from a store.
+- Release Firefox 160.0 (Mozilla's build, unpacked into a scratch folder, not installed), measured
+  2026-11-16: robot checks 25/25, real input 26/26, real input against the live site 32/32.
+- Live site with real input, measured 2026-11-16: Chrome 157 29/29 on the first and last run (two runs
+  between stopped at 24/27 and 25/27: another window took the keyboard; the test misread an address).
+  Edge 157 28/29, 28/29, then 27/27. Playwright Firefox 150.0.2 30/32. 13 of 16 live searches took 0.9
+  to 1.9 s; one took 13.2 s (Edge) and one 17.2 s (Firefox 160). Two searches for "Krebs cycle steps"
+  listed 6 results instead of 20; cause not investigated. node tests 160/160.
+- Add-on permissions, read from addons.mozilla.org on 2026-11-16 (`tools/compare_permissions.py`,
+  `founder/addon-permissions.json`): of 18 official add-ons from 13 search engines, 16 ask for more than
+  Telisik, 0 the same, 2 less (Brave Search, Swisscows; both only set the default engine). The 15 that
+  put search in a new place all ask for more; none does all four places; none bars its own pages from
+  the network by CSP. Firefox store only, one day; a permission is not behaviour.
+- Not tested: an extension installed from a store (needs developer accounts), `web-ext lint` (the
+  company network refuses the npm registry), any second machine.
 - The numbers below are from `1ce489d`, before the extension was added.
 
 - node tests 146/146. Functional 67/67 in Chrome 157.0.8103.78 and 67/67 in Firefox 150.0.2. Full run with
@@ -93,6 +105,8 @@ State on 2026-11-16 (app commit `bfed69d`; the page itself is unchanged since `1
 
 - Not the best search engine overall. It is the best I could find for one narrow job: free, no account, ads
   or tracking, one query across 23 public libraries, verbatim quotes only, ranking arithmetic on show.
+- The one measured lead over other search engines' own add-ons is permissions (see Quality). It is not a
+  lead in search quality, and the extension is in no store.
 - It is a page plus an extension, not a browser. Chromium and Firefox are what it runs in, so it cannot
   beat them; it installs from them and plugs into their new tab page, address bar, right-click menu,
   toolbar and share sheet. On a real new tab the cursor starts in the address bar in Chrome, Edge and
@@ -128,3 +142,4 @@ State on 2026-11-16 (app commit `bfed69d`; the page itself is unchanged since `1
 - 2026-11-16: leftovers and browser integration - install, address-bar search, share target, Stack Exchange key, third question set, GitHub follow-up fault shown - [commit](https://github.com/juw12/telisik/commit/d932892) · [commit](https://github.com/juw12/telisik/commit/6d6ed0a) · [commit](https://github.com/juw12/telisik/commit/1ce489d) · 2026-11-16 1109 telisik leftovers browser
 - 2026-11-16: browser extension - new tab page, address-bar keyword `tk`, right-click search, toolbar button - [commit](https://github.com/juw12/telisik/commit/858db79) · 2026-11-16 1313 telisik browser extension
 - 2026-11-16: extension tested with real keyboard and mouse - Chrome 25/25, Edge 25/25, Playwright Firefox 24/26, Firefox bubble hint, Edge robot run - [commit](https://github.com/juw12/telisik/commit/bfed69d) · 2026-11-16 1731 telisik real input tests
+- 2026-11-16: release Firefox 160 and live-site real-input tests, add-on permission comparison (18 add-ons, 16 ask more, 2 less) - [commit](https://github.com/juw12/telisik/commit/7ba74e2) · 2026-11-16 2040 telisik release firefox live addon permissions
