@@ -9,7 +9,7 @@ tags:
   - public
 repo: "https://github.com/juw12/inti"
 visibility: public
-updated: 2026-11-16
+updated: 2026-11-17
 source: github-sync
 claim: "Built Inti: a from-scratch capability microkernel OS in Rust for 32-bit x86 that boots in a browser tab and restarts a crashed or hung driver while the system keeps running, with files on its disk that survive a restart; emulator only, not verified"
 role: author
@@ -30,10 +30,10 @@ publish: true
 ## What it does
 
 - Its own boot sector (no GRUB, no multiboot), a capability microkernel of 2,933 lines of Rust with 22 system calls, and device drivers that run as ordinary programs.
-- A supervisor restarts a driver that crashes or stops answering. In QEMU the screen driver answered again 7.0 ms after a crash and 695.4 ms after a hang (median of 5 runs, guest clock).
+- A supervisor restarts a driver that crashes or stops answering. In QEMU the screen driver answered again 50.7 ms after a crash and 708.1 ms after a hang (median of 5 runs, guest clock).
 - Files that survive a restart (new in 0.2.0), kept by a disk driver that is itself an ordinary program. In QEMU, 60 random power cuts left 0 broken volumes.
 - No ambient authority: every system call starts from a capability. A hostile program holding one capability made 51 attempts on the kernel, the hardware and other programs in QEMU, and all 51 were denied.
-- The kernel has no heap; the kernel, boot sector and programs hold 88 uses of `unsafe`, each with a written justification. A fuzz run of 1,000,754 random system calls from 2,153 tasks in QEMU ended with 0 invariant violations in 4,577 checks.
+- The kernel has no heap; the kernel, boot sector and programs hold 88 uses of `unsafe`, each with a written justification. A fuzz run of 1,000,769 random system calls from 2,283 tasks in QEMU ended with 0 invariant violations in 4,653 checks.
 - The browser demo boots the same disk image, byte for byte, in v86, with buttons that crash a driver, hang the file server, run the hostile program and fuzz the kernel.
 
 ## Notes
@@ -41,7 +41,7 @@ publish: true
 - A small research system, not a usable one: emulators only (QEMU and v86), never started on a real computer, no network, one processor. Storage is one volume of at most 4 MiB (48 files, one namespace, the primary ATA channel in PIO mode); in the browser demo files last until the page is reloaded. Its programs are a handful of small ones.
 - Not formally verified (seL4 is). W^X is enforced only where the processor has the no-execute bit and has only been shown in emulators; no IOMMU, revocation takes back all copies or none, and the supervisor is trusted with everything.
 - None of the ideas is new: MINIX 3 restarts user-mode drivers, seL4 is a capability kernel with proofs, Redox is a microkernel system in Rust, and they work at real scale. The request was "the best in the world"; Inti is not that, and its README says so.
-- Evidence: `python build.py gates` gave 9 of 9 gates on 2026-11-16, and `tools/check_claims.py` recomputes the numbers in the documents. The fuzz button was not exercised in the live browser check; the other demo commands were.
+- Evidence: `python build.py gates` gave 9 of 9 gates on 2026-11-17, and `tools/check_claims.py` recomputes the numbers in the documents. The fuzz button was not exercised in the live browser check; the other demo commands were.
 
 ## Updates
 
@@ -54,3 +54,4 @@ publish: true
 
 - 2026-11-13, later: on the owner's instruction `main` now holds round 7 (commit `b112a23`). Pull requests #1 to #6 are merged, the demo page serves the round 7 image (live files match the checkout), and the old `main` is kept as tag `backup-main-before-r7` on the remote. By the loop's keep rule none of rounds 2 to 7 was kept; the kept score stays 7.95.
 - 2026-11-16: product round 1 (a disk driver as an ordinary program, files that survive a restart, a machine matrix of 10 QEMU machines, pages on storage, hardware and programs): 9/9 gates, merged as [#7](https://github.com/juw12/inti/pull/7), released as v0.2.0; no judged score this round · 2026-11-16 1608 inti hone
+- 2026-11-17: product round 2 (share check sets noisy measurements aside, planted-fault time limit no longer counts as a catch, banner version, all evidence re-run): 9/9 gates, merged as [#8](https://github.com/juw12/inti/pull/8), released as v0.2.1; share check still fails about 7 % of runs as "could not measure"; no judged score this round · 2026-11-17 0434 inti hone
