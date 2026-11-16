@@ -9,11 +9,11 @@ tags:
   - public
 repo: "https://github.com/juw12/portfolio"
 visibility: public
-updated: 2026-11-08
+updated: 2026-11-09
 source: hone
 claim: "Built an interactive portfolio site plus two browser games (Cozy Island, Townsquare 3D); Cozy Island plays on desktop and phones with a clean, emoji-free UI"
 role: author
-evidence: [https://github.com/juw12/portfolio, https://juw12.github.io/portfolio/game/, https://juw12.github.io/p/cozy-island/]
+evidence: [https://github.com/juw12/portfolio, https://juw12.github.io/portfolio/cozy-island/, https://juw12.github.io/p/cozy-island/]
 publish: true
 ---
 
@@ -23,7 +23,7 @@ publish: true
 
 - **Repo:** https://github.com/juw12/portfolio (public)
 - **Site:** https://juw12.github.io/portfolio/ · https://juwenlie.pages.dev/
-- **Cozy Island:** https://juw12.github.io/portfolio/game/ · landing https://juw12.github.io/p/cozy-island/
+- **Cozy Island:** https://juw12.github.io/portfolio/cozy-island/ (old /game/ redirects) · landing https://juw12.github.io/p/cozy-island/
 
 ## Log
 
@@ -35,3 +35,4 @@ publish: true
 See also: GitHub repos
 - 2026-11-08: Cozy Island professional UI (theme Paper, one SVG icon set, no emoji, slimmer phone landscape sheet), PR #45 (`26bff4e`), spec in game/source/design.md. Council 5.8 -> 7.65.
 - 2026-11-08: Cozy Island UI round 4, PR #46 (`3c13eaa`): compact phone landscape (More toggle, corner panels), one panel per activity, clearer tool states. Council 7.65 -> 7.78.
+- 2026-11-09: Cozy Island UI round 5, PR #47 (`a57f708`): one tile system (7 places + Journal as 8 equal tiles on every screen), quiet tool tier, warmer cream tiles, serif titles with an island mark, same short names everywhere, phone tab strip fits one screen. Pairwise council beat the previous live build each step (3-0, 2-0, 2-0); absolute council stays in a 7.7-7.9 noise band. 2026-11-09 0910 cozy-island ui round5
