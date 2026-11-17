@@ -5,11 +5,11 @@ date: 2026-11-14
 tags:
   - github
   - project/not-real-vera
-  - status/active
+  - status/cancelled
   - public
 repo: "https://github.com/juw12/not-real-vera"
 visibility: public
-updated: 2026-11-16
+updated: 2026-11-17
 source: hone
 claim: "Built Vera Checks (repo not-real-vera): a short-video channel kit about scam and deepfake defence with one on-camera presenter - niche research, channel rules, five episodes scripted from FBI IC3 alerts, a local renderer (voice, captions, vertical video) and a Buffer scheduler for YouTube, Instagram and TikTok with a human approval step. Nothing posted yet"
 role: author
@@ -18,6 +18,11 @@ publish: true
 ---
 
 # not-real-vera
+
+> **Cancelled on 2026-11-17 at Juwen's request. Nothing was ever posted.** The GitHub repo is the one
+> remaining copy (last push `4329e1e`). The local working folder (3.4 GB: code, models, presenter
+> tools, the five rendered videos, `refine_log.md`) was deleted. The landing page, portfolio card,
+> GitHub Pages site and profile README entry are still online and still describe it as a live project.
 
 > "Ten seconds. Check first." Channel name: Vera Checks (`@verachecks`, availability unchecked).
 
