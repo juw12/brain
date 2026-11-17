@@ -9,7 +9,7 @@ tags:
   - public
 repo: "https://github.com/juw12/buddy"
 visibility: public
-updated: 2026-11-11
+updated: 2026-11-17
 source: github-sync
 claim: "Built buddy: Walks new engineers through clunky work software (PLM, SRM, ERP), click by click, or…"
 role: author
@@ -56,5 +56,7 @@ Buddy is the app. It owns the tray…
 - 2026-11-17: **Talk mode merged** (PR 23, squash commit `aa01a60` on main, on Juwen's word). Tests and the Pages build are green on main, and the talk mode vs Jev table is live on https://juw12.github.io/buddy/ (the live page is identical to `docs/index.html`). Gate G4 is still not met, so it is **still not faster than Jev**. No new release was made: the installed Buddy is still 1.3.2 and does not have talk mode yet.
 
 - 2026-11-17: **Buddy 1.4.0 released** (https://github.com/juw12/buddy/releases/tag/v1.4.0, PR 24, squash commit `5262f9a`). Talk mode is now in the Windows download and goes to users through auto-update (on by default; checks every 3 hours, installs when idle, self-test and roll back). Live `latest.json` says 1.4.0 for Windows and Mac. Checked: built app self-test passed; the updater code offered 1.4.0 to 1.3.2, downloaded it, the SHA-256 matched and the download passed its self-test, all in a scratch folder. **Not checked**: a real installed 1.3.2 swapping itself, and talk mode in the installed app with a real microphone. Still not faster than Jev (G4). Log: 2026-11-17 0903 buddy 1.4.0 release
+
+- 2026-11-17: **Thinking fast and slow, and Buddy 1.5.0 released** (https://github.com/juw12/buddy/releases/tag/v1.5.0, PR 25 squash commit `ef13ae1`, PR 26 squash commit `9dd009c`). After Kahneman: System 1 does a plain one-step command at once with no screenshot and no brain (close, minimize, maximize or switch to a named window, open an app or site); anything less plain goes to the brain. The surer it must be, the more a mistake would cost (0.80 to switch, 0.95 to close). It picks up habits from what the brain did, and "no" within 30 s counts against them. On 94 held-out requests it did 43 of 49 one-step commands fast and none wrong; one decision takes 0.011 ms, a real window action 0.014 s, against 3.35 s for the free brain just to reply. Jev was **not run here**; its fast model is much broader and its confidence is trained, and the README table says so. Buddy is narrower, but it has both minds, the handoff, the bars and the learning on the PC. Live `latest.json` says 1.5.0; the built app and the downloaded update both passed the self-test. **Not checked**: a fast command in the installed 1.5.0 (typed or by microphone), a real 1.4.0 swapping itself, requests written by other people, habit confidence in real use. Council 1.8 -> 7.8 (3 judges), 7 of 7 gates. Log: 2026-11-17 1342 buddy fast and slow
 
 See also: GitHub repos
