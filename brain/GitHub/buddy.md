@@ -55,4 +55,6 @@ Buddy is the app. It owns the tray…
 
 - 2026-11-17: **Talk mode merged** (PR 23, squash commit `aa01a60` on main, on Juwen's word). Tests and the Pages build are green on main, and the talk mode vs Jev table is live on https://juw12.github.io/buddy/ (the live page is identical to `docs/index.html`). Gate G4 is still not met, so it is **still not faster than Jev**. No new release was made: the installed Buddy is still 1.3.2 and does not have talk mode yet.
 
+- 2026-11-17: **Buddy 1.4.0 released** (https://github.com/juw12/buddy/releases/tag/v1.4.0, PR 24, squash commit `5262f9a`). Talk mode is now in the Windows download and goes to users through auto-update (on by default; checks every 3 hours, installs when idle, self-test and roll back). Live `latest.json` says 1.4.0 for Windows and Mac. Checked: built app self-test passed; the updater code offered 1.4.0 to 1.3.2, downloaded it, the SHA-256 matched and the download passed its self-test, all in a scratch folder. **Not checked**: a real installed 1.3.2 swapping itself, and talk mode in the installed app with a real microphone. Still not faster than Jev (G4). Log: 2026-11-17 0903 buddy 1.4.0 release
+
 See also: GitHub repos
