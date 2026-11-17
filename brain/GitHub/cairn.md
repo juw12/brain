@@ -9,7 +9,7 @@ tags:
   - public
 repo: "https://github.com/juw12/cairn"
 visibility: public
-updated: 2026-11-11
+updated: 2026-11-17
 source: github-sync
 claim: "Built cairn: A second brain that lives inside your repo"
 role: author
@@ -29,6 +29,7 @@ publish: true
 
 ## Changes
 
+- 2026-11-17: Phone map no longer lags on a big brain, a Telegram bot reports Cairn's status daily, UI tidy ([PR #43](https://github.com/juw12/cairn/pull/43)): unlinked notes hidden above 1,000 notes with a "Show all" chip, pan and pinch by CSS transform (phone emulation, 2,780 notes: open 13.2 s -> 2.2 s, pan frame 183 -> 17 ms); `cairn telegram setup <token>` + Worker `cairn-telegram` (daily report, `/status`); `cairn vibe check` runs in the folder it is called from. Open: bot token from @BotFather, so no real daily message seen yet.
 - 2026-11-11: Chat from anywhere: when the phone can't reach the PC, Chat goes through the private repo `juw12/cairn-relay` (phone writes `requests/`, the desktop app answers in `threads/`); `cairn relay setup` creates it and keeps the token DPAPI-sealed ([92b7020](https://github.com/juw12/cairn/commit/92b7020)). Log: 2026-11-12 0047 cairn chat from anywhere relay
 - 2026-11-11: Live sessions show a progress bar, time left and a Light/Medium/Heavy effort rating with its reasons, on each Vibe card and in the overview lanes; `cairn vibe log --progress N` lets an agent report its own percent ([1d43870](https://github.com/juw12/cairn/commit/1d43870)).
 - 2026-11-11: Chat page talks to the PEGAAi OpenCode models from the PC or a paired phone, with a Glow tab ([22a76c0](https://github.com/juw12/cairn/commit/22a76c0)); phones pair by QR code and both screens update live ([dd8c2d8](https://github.com/juw12/cairn/commit/dd8c2d8)).
