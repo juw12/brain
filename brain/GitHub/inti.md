@@ -9,7 +9,7 @@ tags:
   - public
 repo: "https://github.com/juw12/inti"
 visibility: public
-updated: 2026-11-17
+updated: 2026-11-18
 source: github-sync
 claim: "Built Inti: a from-scratch capability microkernel OS in Rust for 32-bit x86 that boots in a browser tab and restarts a crashed or hung driver while the system keeps running, with files on its disk that survive a restart; emulator only, not verified"
 role: author
@@ -55,3 +55,4 @@ publish: true
 - 2026-11-13, later: on the owner's instruction `main` now holds round 7 (commit `b112a23`). Pull requests #1 to #6 are merged, the demo page serves the round 7 image (live files match the checkout), and the old `main` is kept as tag `backup-main-before-r7` on the remote. By the loop's keep rule none of rounds 2 to 7 was kept; the kept score stays 7.95.
 - 2026-11-16: product round 1 (a disk driver as an ordinary program, files that survive a restart, a machine matrix of 10 QEMU machines, pages on storage, hardware and programs): 9/9 gates, merged as [#7](https://github.com/juw12/inti/pull/7), released as v0.2.0; no judged score this round · 2026-11-16 1608 inti hone
 - 2026-11-17: product round 2 (share check sets noisy measurements aside, planted-fault time limit no longer counts as a catch, banner version, all evidence re-run): 9/9 gates, merged as [#8](https://github.com/juw12/inti/pull/8), released as v0.2.1; share check still fails about 7 % of runs as "could not measure"; no judged score this round · 2026-11-17 0434 inti hone
+- 2026-11-18: product round 3 (a display server with a desktop of 640 by 480 pixels, a terminal and up to 6 program windows, a mouse, background programs; all evidence re-run): 9/9 gates, merged as [#9](https://github.com/juw12/inti/pull/9), released as v0.3.0; emulators only, keyboard goes to the terminal only; no judged score this round · 2026-11-18 0304 inti hone
