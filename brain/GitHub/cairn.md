@@ -9,7 +9,7 @@ tags:
   - public
 repo: "https://github.com/juw12/cairn"
 visibility: public
-updated: 2026-11-17
+updated: 2026-11-19
 source: github-sync
 claim: "Built cairn: A second brain that lives inside your repo"
 role: author
@@ -29,6 +29,7 @@ publish: true
 
 ## Changes
 
+- 2026-11-19: Version history inside the app: every build with its date and what changed, from `docs/versions.json` (15 builds back to 5 Nov), opened from the sidebar foot, Settings or the command palette; `CHANGELOG.md` is generated from it and a test fails when the build number moves without an entry ([PR #50](https://github.com/juw12/cairn/pull/50))
 - 2026-11-19: Journal is one period bar (any number of days) with a day-by-day Recap, automatic mood and no reviews to write; Proof recap is one line per item ([PR #48](https://github.com/juw12/cairn/pull/48)). Session notes name their computer and Vibe has a device switch (all computers combined, or one alone); a computer's first pass imports its whole OpenCode history ([PR #49](https://github.com/juw12/cairn/pull/49)). 2026-11-19 1427 cairn journal recap and device switch
 - 2026-11-19: Every remaining page is blocks that fold and arrange, each with a Dashboard and a Recap (Today, Board, Ideas, Decisions, Journal, Chat, Autopilot, Map, Canvas list, Notes, Code inbox); a big-map pan is no longer redrawn mid-slide ([PR #47](https://github.com/juw12/cairn/pull/47))
 - 2026-11-18: Vibe shows a session only while it works: a finished OpenCode turn ends it at once, deleted or 4 h silent sessions are closed, no more "waiting for you" or "quiet"; live cards merged into the Live recap rows, OpenBot has its own group, every Vibe section folds; Projects, People and Proof are blocks you can fold and arrange, each with a Dashboard and a Recap; sidebar is 5 entries (Autopilot inside Chat, Journal inside Build, Notes and Code inbox under Tools) and closes on a click outside ([PR #46](https://github.com/juw12/cairn/pull/46))
