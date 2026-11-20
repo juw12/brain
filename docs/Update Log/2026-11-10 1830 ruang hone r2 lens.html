@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Cairn">
+<title>ruang v1.3.0: lens read from the photo (/hone round 2) · Juwen Lie</title>
+<meta name="description" content="Asked: &quot;continue /hone then update github&quot;. Shipped Lens from EXIF: the 35 mm-equivalent focal length (FocalLengthIn35mmFilm) sets the field of view, computed…">
+<link rel="canonical" href="https://juw12.github.io/brain/Update%20Log/2026-11-10%201830%20ruang%20hone%20r2%20lens.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ruang v1.3.0: lens read from the photo (/hone round 2) · Juwen Lie">
+<meta property="og:description" content="Asked: &quot;continue /hone then update github&quot;. Shipped Lens from EXIF: the 35 mm-equivalent focal length (FocalLengthIn35mmFilm) sets the field of view, computed…">
+<meta property="og:url" content="https://juw12.github.io/brain/Update%20Log/2026-11-10%201830%20ruang%20hone%20r2%20lens.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">&larr; Juwen Lie</a>
+<h1>ruang v1.3.0: lens read from the photo (/hone round 2)</h1>
+<p class="meta">2026-11-10</p>
+<p class="tags"><span>update-log</span><span>ruang</span><span>hone</span><span>photo-3d</span></p>
+<p>Asked: &quot;continue /hone then update github&quot;.</p>
+<h2>Shipped</h2>
+<ul><li>Lens from EXIF: the 35 mm-equivalent focal length (FocalLengthIn35mmFilm) sets the field of view, computed on the frame diagonal so 4:3, 16:9 and portrait photos all work. Photos without EXIF show &quot;assuming 26 mm&quot; plus a 0.5x / 1x / 2x picker; the lens source is always shown (7 languages).</li><li>Why: with the ceiling height known, the far-wall width does not depend on the lens, but depth does: a 0.5x photo read as 1x came out 2.00x too deep (unit test).</li><li>Android emulator test now taps &quot;Add photos&quot; and records whether the system picker opens.</li><li>Release v1.3.0 (Windows exe + installer, signed APK) via the gated CI.</li></ul>
+<h2>Verified</h2>
+<ul><li>Local gates ALL PASS: G1 unit 65/65 (14 new), G2 e2e all, G3 slop 0 blockers, G4 i18n 100 %, G6 390 px, 0 console errors.</li><li>The first test run caught a wrong claim of mine (lens changes width); fixed the test to the correct quantity (depth).</li><li>Council (3 judges): blind pairwise r2 beats r1 3-0; score 7.2 vs same-format r1 baseline 6.9 (r2 artifact had a screenshot, which lifted C5 visual from 5 to 7; C1 stayed 7).</li></ul>
+<h2>Next (judge asks)</h2>
+<ul><li>Depth anchor from a known reference (door height, floor tile) instead of the 0.4 m camera assumption.</li><li>Genre-specific geometry per render style.</li></ul>
+</main>
+<footer>Made with <a href="https://juw12.github.io/p/cairn/">Cairn</a> from notes marked <code>publish: true</code>. Everything else stays private.</footer>
+</body>
+</html>

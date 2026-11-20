@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Cairn">
+<title>ruang: now an installable app (Windows exe + phone/desktop PWA) · Juwen Lie</title>
+<meta name="description" content="Asked: &quot;make it into app, not html&quot;. Shipped Windows desktop app: Tauri 2 shell (desktop/) with the web app embedded; one portable exe, opens in its own…">
+<link rel="canonical" href="https://juw12.github.io/brain/Update%20Log/2026-11-10%201620%20ruang%20app.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ruang: now an installable app (Windows exe + phone/desktop PWA) · Juwen Lie">
+<meta property="og:description" content="Asked: &quot;make it into app, not html&quot;. Shipped Windows desktop app: Tauri 2 shell (desktop/) with the web app embedded; one portable exe, opens in its own…">
+<meta property="og:url" content="https://juw12.github.io/brain/Update%20Log/2026-11-10%201620%20ruang%20app.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">&larr; Juwen Lie</a>
+<h1>ruang: now an installable app (Windows exe + phone/desktop PWA)</h1>
+<p class="meta">2026-11-10</p>
+<p class="tags"><span>update-log</span><span>ruang</span><span>tauri</span><span>pwa</span></p>
+<p>Asked: &quot;make it into app, not html&quot;.</p>
+<h2>Shipped</h2>
+<ul><li><strong>Windows desktop app</strong>: Tauri 2 shell (<code>desktop/</code>) with the web app embedded; one portable exe, opens in its own window, offline. Release v1.1.0: <a href="https://github.com/juw12/ruang/releases/tag/v1.1.0">https://github.com/juw12/ruang/releases/tag/v1.1.0</a> (<code>Ruang-1.1.0-windows-x64.exe</code>, 3,986,432 bytes, SHA256SUMS attached).</li><li><strong>Phone + desktop install (PWA)</strong>: manifest with id/scope + PNG and maskable icons, apple-touch-icon, service worker <code>sw.js</code> (offline cache of the app shell, 3D engine, style thumbs and sample room). Live manifest and sw.js return 200 on Pages.</li><li>Share links made in the desktop app point at the public web app.</li><li>CI <code>.github/workflows/desktop.yml</code> on windows-latest: build exe, check WebView2, smoke-test the real window, attach exe to the release on <code>v*</code> tags.</li><li>README: &quot;Install it as an app&quot; table (Windows / Android / iPhone / Mac-Linux-Chromebook).</li></ul>
+<h2>Verified</h2>
+<ul><li>CI desktop smoke 11/11 in the real WebView2 window (Edge 156): page from tauri.localhost, boots, desktop mode, no service worker inside the exe, 3D canvas, sample room builds 3.6 m x 4.55 m, share base = public URL, no JS errors, screenshot.</li><li>Release asset download returns 200.</li><li>Web gates before the app work: G1 54/54, i18n, e2e, 390 px phone (all pass).</li></ul>
+<h2>Not done / limits</h2>
+<ul><li>No local exe build: this PC has no MSVC link.exe or windres; the exe is built on GitHub Actions.</li><li>Exe is not code-signed (SmartScreen &quot;More info -&gt; Run anyway&quot;).</li><li>Phones install the PWA; no store APK/IPA.</li><li>Local re-run of the browser e2e gates after the last JS change timed out on page load (machine overloaded); the change only adds two functions to <code>window.__ruang</code>, and the CI smoke exercises them.</li></ul>
+<p>Links: <a href="../GitHub/ruang.html">ruang</a> · landing <a href="https://juw12.github.io/p/ruang/">https://juw12.github.io/p/ruang/</a></p>
+</main>
+<footer>Made with <a href="https://juw12.github.io/p/cairn/">Cairn</a> from notes marked <code>publish: true</code>. Everything else stays private.</footer>
+</body>
+</html>

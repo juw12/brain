@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Cairn">
+<title>founder-studio · Juwen Lie</title>
+<meta name="description" content="Built Founder Studio: a local 3D buyer-panel simulator for pre-launch ideas where every number is computed by open scripts, with a full in-browser demo">
+<link rel="canonical" href="https://juw12.github.io/brain/GitHub/founder-studio.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="founder-studio · Juwen Lie">
+<meta property="og:description" content="Built Founder Studio: a local 3D buyer-panel simulator for pre-launch ideas where every number is computed by open scripts, with a full in-browser demo">
+<meta property="og:url" content="https://juw12.github.io/brain/GitHub/founder-studio.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">&larr; Juwen Lie</a>
+<h1>founder-studio</h1>
+<p class="meta">author · 2026-11-08</p>
+<p class="tags"><span>github</span><span>project/founder-studio</span><span>status/active</span><span>public</span></p>
+<div class="claim">Built Founder Studio: a local 3D buyer-panel simulator for pre-launch ideas where every number is computed by open scripts, with a full in-browser demo<ul><li><a href="https://github.com/juw12/founder-studio">github.com/juw12/founder-studio</a></li><li><a href="https://juw12.github.io/founder-studio/">juw12.github.io/founder-studio</a></li></ul></div>
+<blockquote><p>Founder Studio: pressure-test a pre-launch business idea with a simulated buyer panel in a 3D studio. Pricing, unit economics and the verdict come from open scripts, not from the model&#x27;s guess.</p></blockquote>
+<ul><li><strong>Repo:</strong> <a href="https://github.com/juw12/founder-studio">https://github.com/juw12/founder-studio</a> (public, MIT)</li><li><strong>Live demo:</strong> <a href="https://juw12.github.io/founder-studio/">https://juw12.github.io/founder-studio/</a> (runs entirely in the browser)</li><li><strong>Landing page:</strong> <a href="https://juw12.github.io/p/founder-studio/">https://juw12.github.io/p/founder-studio/</a></li><li><strong>Portfolio card:</strong> <a href="https://juwenlie.pages.dev/">https://juwenlie.pages.dev/</a></li><li><strong>Stack:</strong> Python standard library server (<code>server.py</code>), three.js r160 front end, plain JS/HTML/CSS; optional OpenAI-compatible or Anthropic API for live panels</li><li><strong>Started:</strong> 2026-11-07 · <strong>last push:</strong> 2026-11-08</li></ul>
+<h2>How the online demo works</h2>
+<ul><li><code>scripts/build_pages.py</code> builds <code>docs/</code> (GitHub Pages on <code>main:/docs</code>).</li><li><code>js/browser-backend.js</code> loads Pyodide 0.27.7 and runs the real <code>server.py</code> plus the skill scripts in the browser, so the demo uses the same code as the local app (no separate mock).</li><li>Example verdict from the demo project: &quot;Incomplete: no official panel; $4.76 per cup, 73% contribution&quot; (computed by <code>compile.py</code>).</li></ul>
+<h2>Checks (2026-11-08)</h2>
+<ul><li><code>check_demo.py</code> local + live, desktop and phone: PASS, 0 console errors, verdict computes.</li><li><code>test_api.py</code>: 0 failures.</li><li>Landing page gates: DNA 1/1, gates 1/1, slop_check 0 blockers.</li></ul>
+<h2>Limits</h2>
+<ul><li>Synthetic respondents are not representative and not validated against real buyers (README &quot;Known limits&quot;).</li><li>First demo load downloads Pyodide (tens of MB), so it is slow on a weak connection.</li></ul>
+<h2>Log</h2>
+<ul><li>2026-11-08: live demo, portfolio card, landing page, profile README entry 2026-11-08 0320 founder-studio live demo card landing</li><li>2026-11-08: review loop (reviewer bots critique and auto-fix the pitch, same buyers judge) + Graphite design pass 2026-11-08 0950 founder-studio hone</li></ul>
+<ul><li>2026-11-08: hone s5 calm UI pass shipped (<code>e99f165</code>): single stats strip, flat feed, no symbol glyphs, prices to 2 decimals. Council 8.07 to 8.55, pair tie. Substack post ready in juw12/portfolio#31 (needs login).</li></ul>
+<h2>2026-11-08 readable arena (hone, session J)</h2>
+<ul><li>Commit 7505061 on top of the calm pass e99f165: buyer roster (hover/click), idle queue preview in two rows with a QUEUE sign, steeper camera with tidy BUY/PASS piles, amber thinking ring, &quot;decided so far&quot; HUD.</li><li>Council mean 7.98 on the merged tree (best round 8.33); target 8.5 not met. All gates A1-A8 pass.</li></ul>
+<h2>2026-11-08 paper theme + interactive square (hone v2)</h2>
+<ul><li>Commits 8ac7871, 2ab09ba, Pages 71566ba: Cairn/Jeda paper theme with self-hosted fonts, warmer 3D square (paving, trees, benches, bunting, varied buyers), camera views, hover + click-to-inspect, after-run buyer spotlight.</li><li>Rubric v2 (style gates S1-S4 + A1-A8) all pass; council 8.5 (target 8.5). 2026-11-08 2247 founder-studio hone</li></ul>
+<h2>2026-11-09 queue round</h2>
+<ul><li>v2-r4 (0b4632c, Pages 8898802): sunflower BUY/PASS piles, phone arena controls row, clearer deal errors. Council 8.5.</li><li>v2-r5 (c9133d4, Pages 587cb25 + c4af5e4): latest-decision line under the square on phones with an &quot;All buyers&quot; jump, inspector below the square on phones, bigger signs/labels on phones, 3D hover ring + selection pin, guided setup steps with Next, warmer light. Council 8.8 / 8.6 = 8.7, all gates pass.</li><li>Portfolio card regenerated light (juw12/portfolio 16ee62a, catalog 69b5136); landing shot refreshed (juw12.github.io e491c31).</li><li>Next: compact buyer-state strip on phones, walking state in the legend, collapse &quot;How it works&quot; after the first run, pitch preview in setup. 2026-11-09 1034 founder-studio queue round</li></ul>
+<h2>2026-11-09 queue round 2 (plateau)</h2>
+<ul><li>v2-r7..r10 built and judged: label clash fix, thinking dot, walking state, tappable phone buyer tiles (32 px, initials), earlier decisions in the phone ticker, newest-decision ring in 3D.</li><li>Scores 8.7 / 8.7 / 8.6 / 8.7 against best 8.8 (v2-r6); pair vote r6 1, r10 0, tie 2. Not shipped; live demo stays v2-r6 (9eba9a4).</li><li>Work kept on branch hone/v2-r7-r10 for later reuse.</li><li>Next: change the lever. Richer 3D scene detail, provenance labels on every number, a one-line mode hint by Quick sim / AI buyers / Replay. 2026-11-09 1251 founder-studio plateau</li></ul>
+<ul><li>2026-11-09: hone v2-r11 scored 8.95 (new best, up from 8.8): richer 3D plaza with stone curb, fountain, neighbour stalls, string lights, crates and sacks; speed readout. Commits 5b4f3d4 + Pages b695c34, push pending (office proxy down). r12 (8.9) parked on hone/v2-r12.</li><li>2026-11-09: v2-r11 (8.95) pushed and live-checked. r12 (8.9) and r13 (8.4, phone bottom-sheet feed) parked on hone/v2-r12 and hone/v2-r13; loop stopped at plateau. Next: Founder Studio inside Cairn once the Cairn session finishes.</li><li>2026-11-09: fair re-test of r13 (phone bottom-sheet feed) with an extra tapped-state screenshot: pair vote r11 2 / r13 0 / tie 1. r11 stays live; queue done. Next: Founder Studio inside Cairn once the Cairn session ends.</li><li>2026-11-09: now runs inside Cairn on the Founder Studio page (<a href="https://github.com/juw12/cairn/pull/26">cairn PR #26</a>); development continues in Cairn <code>docs/founder/</code>. Finished runs save to the brain as notes. 2026-11-09 2300 founder studio in cairn</li><li>2026-11-09: inside Cairn, three live steps now guide a first run and <strong>write your own</strong> opens setup (<a href="https://github.com/juw12/cairn/pull/27">cairn PR #27</a>). 2026-11-09 2340 founder studio steps</li><li>2026-11-10: inside Cairn the studio now drops its own brand, the page lists saved panels and suggests the next test (<a href="https://github.com/juw12/cairn/pull/29">cairn PR #29</a>); phone sheet ported (<a href="https://github.com/juw12/cairn/pull/28">cairn PR #28</a>). 2026-11-10 1050 founder studio page hone</li><li>2026-11-10: inside Cairn the studio now uses Cairn&#x27;s fields, buttons and tabs and follows its light or dark theme; opened on its own it looks as before (<a href="https://github.com/juw12/cairn/pull/33">cairn PR #33</a>). 2026-11-10 2253 cairn sidebar vibe overview founder look</li></ul>
+</main>
+<footer>Made with <a href="https://juw12.github.io/p/cairn/">Cairn</a> from notes marked <code>publish: true</code>. Everything else stays private.</footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Cairn">
+<title>hexbane · Juwen Lie</title>
+<meta name="description" content="Built Hexbane: scans AI agent skills, MCP servers and tool lists for prompt injection, hidden or disguised text, secret theft and risky commands before they…">
+<link rel="canonical" href="https://juw12.github.io/brain/GitHub/hexbane.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexbane · Juwen Lie">
+<meta property="og:description" content="Built Hexbane: scans AI agent skills, MCP servers and tool lists for prompt injection, hidden or disguised text, secret theft and risky commands before they…">
+<meta property="og:url" content="https://juw12.github.io/brain/GitHub/hexbane.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">&larr; Juwen Lie</a>
+<h1>hexbane</h1>
+<p class="meta">author · 2026-11-10</p>
+<p class="tags"><span>github</span><span>project/hexbane</span><span>status/active</span><span>public</span><span>ai-security</span></p>
+<div class="claim">Built Hexbane: scans AI agent skills, MCP servers and tool lists for prompt injection, hidden or disguised text, secret theft and risky commands before they load, then gates tool calls and chat at run time.<ul><li><a href="https://github.com/juw12/hexbane">github.com/juw12/hexbane</a></li><li><a href="https://juw12.github.io/hexbane/">juw12.github.io/hexbane</a></li><li><a href="https://juw12.github.io/p/hexbane/">juw12.github.io/p/hexbane</a></li><li><a href="https://github.com/juw12/hexbane/releases/tag/v0.2.1">github.com/juw12/hexbane/releases/tag/v0.2.1</a></li></ul></div>
+<blockquote><p>Breaks the hex before your AI agent falls for it. Three gates: <strong>load gate</strong> (scan skills / MCP configs / tool manifests / scripts, rug-pull pinning with <code>hexbane lock</code>), <strong>call gate</strong> (tool-call and tool-output checks), <strong>chat gate</strong> (the ScopeGuard engine: keeps an assistant on its mission).</p></blockquote>
+<ul><li><strong>Repo:</strong> <a href="https://github.com/juw12/hexbane">https://github.com/juw12/hexbane</a> (public, release v0.2.2).</li><li><strong>Live app:</strong> <a href="https://juw12.github.io/hexbane/">https://juw12.github.io/hexbane/</a> (browser scanner, same rules.json as the CLI)</li><li><strong>Landing page:</strong> <a href="https://juw12.github.io/p/hexbane/">https://juw12.github.io/p/hexbane/</a></li><li><strong>Language:</strong> Python (stdlib) + vanilla JS</li><li><strong>Ships as:</strong> web app, <code>hexbane</code> CLI (JSON / Markdown / SARIF, <code>hexbane fix [--write]</code>), GitHub Action (<code>juw12/hexbane@v0.2.2</code>)</li><li><strong>Compat:</strong> rule prefix HB (was GD), <code>HEXBANE_*</code> env (<code>SCOPEGUARD_*</code> still accepted), <code>.hexbaneignore</code>.</li></ul>
+<h2>Measured (docs/EVALUATION.md, v0.2.1)</h2>
+<ul><li>Disguised-text corpus (65 samples: base64, hex, homoglyphs, zero-width, leetspeak, spacing...): files flagged 53 -&gt; 65/65; rules kept 72 -&gt; 116/123 (v0.2.1 squeeze pass reads letters typed one space apart).</li><li>Held-out set 15/16 exact (11/11 malicious flagged, 0/5 false alarms); tuning 31/31; Invariant Labs PoCs 3/3.</li><li>anthropics/skills 268 PASS / 4 REVIEW / 1 FAIL; MCP reference servers 386 PASS / 2 REVIEW (unchanged from v0.1).</li><li>Browser = Python on all 6 corpora (headless parity test).</li><li>/hone council: v1 9.5 -&gt; v2 9.25 -&gt; <strong>v3 9.85</strong> (3 judges; blind pairwise prefers v3 over v1). Not 10.</li></ul>
+<h2>Open weaknesses (from the judges)</h2>
+<ul><li>No third-party malicious corpus yet; words broken across lines keep only 10/14 rules.</li><li>Chat gate: about 1 in 5 clever off-topic requests get through (needs numbers in EVALUATION).</li><li>Docs that quote attacks still get flagged (5/273 in anthropics/skills).</li><li>No WCAG AA audit of small dark text; no SRI hashes on browser scripts.</li></ul>
+<h2>Lineage</h2>
+<ul><li>Built from ScopeGuard (code in juw12/steward <code>apps/playground</code>, untouched).</li></ul>
+</main>
+<footer>Made with <a href="https://juw12.github.io/p/cairn/">Cairn</a> from notes marked <code>publish: true</code>. Everything else stays private.</footer>
+</body>
+</html>

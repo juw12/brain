@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Cairn">
+<title>meetline · Juwen Lie</title>
+<meta name="description" content="Built Meetline: finds the fairest place for 2 to 8 people to meet, with a road route for each person">
+<link rel="canonical" href="https://juw12.github.io/brain/GitHub/meetline.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="meetline · Juwen Lie">
+<meta property="og:description" content="Built Meetline: finds the fairest place for 2 to 8 people to meet, with a road route for each person">
+<meta property="og:url" content="https://juw12.github.io/brain/GitHub/meetline.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">&larr; Juwen Lie</a>
+<h1>meetline</h1>
+<p class="meta">author · 2026-11-09</p>
+<p class="tags"><span>github</span><span>project/meetline</span><span>status/active</span><span>public</span></p>
+<div class="claim">Built Meetline: finds the fairest place for 2 to 8 people to meet, with a road route for each person<ul><li><a href="https://github.com/juw12/meetline">github.com/juw12/meetline</a></li></ul></div>
+<blockquote><p>Meetline: find the fairest place for 2 to 8 people to meet. Venues are ranked by the longest road trip anyone makes, and each person gets a coloured route. OpenStreetMap + OSRM, no server.</p></blockquote>
+<ul><li><strong>Repo:</strong> <a href="https://github.com/juw12/meetline">https://github.com/juw12/meetline</a> (public)</li><li><strong>Live:</strong> <a href="https://juw12.github.io/meetline/">https://juw12.github.io/meetline/</a></li><li><strong>Landing page:</strong> <a href="https://juw12.github.io/p/meetline/">https://juw12.github.io/p/meetline/</a></li><li><strong>Language:</strong> JavaScript (Leaflet, plain HTML/CSS, no build step)</li><li><strong>Topics:</strong> geolocation, javascript, leaflet, meeting-point, openstreetmap</li><li><strong>Started:</strong> 2026-11-07 · <strong>last push:</strong> 2026-11-09</li></ul>
+<h2>How it works</h2>
+<ul><li>Add people by address search (Nominatim), current location, or a tap on the map.</li><li>Finds the geographic centre, searches nearby cafes, restaurants, malls or parks (Overpass), then asks OSRM for real road times from everyone to each venue.</li><li>Ranks venues by the longest trip (fairness first), then total time; draws a route per person.</li><li>Plans are shared by link (state in the URL). No accounts, no server.</li></ul>
+<h2>Design</h2>
+<ul><li>Direction D &quot;dispatch console&quot;: dark #0E1114 / #161A1F, amber accent #F2B233, Manrope + JetBrains Mono. No emoji, no purple.</li><li>Won a 3-judge council bracket over three other directions; council-judged score 8.1.</li><li>Hone 2 (2026-11-08): group-first phone layout, labeled travel modes (Car / moto, Bike, Walk), same-block venue merge, plain stats (&quot;Everyone arrives within X&quot;, &quot;X combined&quot;) with a 0-30 min axis, one primary button per state, grayscale basemap, How it works + privacy note. Kept round 1: 6/6 simulated users would use it (mean 6.33 vs 5.83), council pair 2-0-1 over baseline. Rounds 2-3 not kept (failed the pairwise and bots keep rule).</li><li>Hone 4 (2026-11-08): Barlow Semi Condensed display face, result-first phone layout, initials on arrival dots, dimmed minor pins, &quot;Midpoint only&quot;, collapsible How it works, share-link privacy note, higher-contrast muted grey, &quot;First to last arrival&quot; copy. Council 7.7 -&gt; 7.8; simulated users 6/6 would use it (6.17). Rounds with a labelled fair zone scored 8.0 with judges but lower with simulated users, so they were not shipped. See 2026-11-08 2300 meetline hone 4.</li><li>Hone 5 (2026-11-09): meeting plan in the Meet at panel (pick a time, each person gets a leave-by clock time), arrival bars that all end at the venue, per-person Bus/train link to Google Maps transit, visible Add button, desktop &quot;Fair zone · similar trip times&quot; label, higher-contrast muted text. Council won pairwise 2-0-1 over Hone 4; simulated users 14/18 would use it (5.94) vs 12/18 (5.89). See 2026-11-09 1040 meetline hone 5.</li><li>Hone 6 (2026-11-09): live group - end-to-end encrypted (AES-GCM) location sharing between phones via an invite link, relayed through ntfy.sh (key only in the URL fragment); positions update on 50 m moves or a 60 s heartbeat, venues re-rank live, stale people marked &quot;Seen x min ago&quot;. Transit as a 4th travel mode with real timetable trips from Transitous (line + walk + route on map), road estimate fallback where no feed exists. &quot;Open in Google Maps&quot; now opens the place page (photos, reviews, traffic). Tests: live relay 19/19 mocked, 17/17 against real ntfy.sh. Honest scores: council tied Hone 5 in every round (7.8, visually equal); simulated users 6.00 vs 5.94 (flat). Shipped for the functional gains. See 2026-11-09 1240 meetline hone 6.</li></ul>
+<h2>Venue details</h2>
+<ul><li>Venue facts (2026-11-08): opening hours from OSM show &quot;Open now · until 22:00&quot; / &quot;Closed · opens tomorrow 08:00&quot;; Meet at panel adds cuisine, takeaway, outdoor seating, wheelchair access and website when tagged. Unparsed hours are shown raw, never guessed.</li></ul>
+<h2>Limits</h2>
+<ul><li>Live sharing relays through the public ntfy.sh service (encrypted, but rate-limited and best effort) and stops when a phone&#x27;s browser tab is closed or suspended; no background tracking.</li><li>Transit times depend on Transitous coverage (none for Batam yet, so an estimate plus a note is shown) and always depart now.</li><li>Car / moto times have no live traffic.</li><li>Photos and reviews are on the Google place page, not inside the app. Venue details depend on OSM tags.</li><li>Public OSM / OSRM / Transitous services have fair-use limits.</li></ul>
+<p>See also: GitHub repos</p>
+</main>
+<footer>Made with <a href="https://juw12.github.io/p/cairn/">Cairn</a> from notes marked <code>publish: true</code>. Everything else stays private.</footer>
+</body>
+</html>

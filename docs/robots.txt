@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://juw12.github.io/brain/sitemap.xml

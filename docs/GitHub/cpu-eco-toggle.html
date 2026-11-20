@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Cairn">
+<title>cpu-eco-toggle · Juwen Lie</title>
+<meta name="description" content="Built CPU Eco Toggle: a Windows tray guard (PowerShell 5.1 + WinForms, no admin rights) that keeps windowless background jobs such as AI agents, builds, local…">
+<link rel="canonical" href="https://juw12.github.io/brain/GitHub/cpu-eco-toggle.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cpu-eco-toggle · Juwen Lie">
+<meta property="og:description" content="Built CPU Eco Toggle: a Windows tray guard (PowerShell 5.1 + WinForms, no admin rights) that keeps windowless background jobs such as AI agents, builds, local…">
+<meta property="og:url" content="https://juw12.github.io/brain/GitHub/cpu-eco-toggle.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">&larr; Juwen Lie</a>
+<h1>cpu-eco-toggle</h1>
+<p class="meta">author · 2026-11-16</p>
+<p class="tags"><span>github</span><span>project/cpu-eco-toggle</span><span>status/active</span><span>public</span></p>
+<div class="claim">Built CPU Eco Toggle: a Windows tray guard (PowerShell 5.1 + WinForms, no admin rights) that keeps windowless background jobs such as AI agents, builds, local LLMs and Python at BelowNormal priority all the time, moves them onto 5 of 8 cores with one click, restores every process&#x27;s original priority and cores on exit, and restarts Vector after a crash or after its window has been frozen for 3 minutes<ul><li><a href="https://github.com/juw12/cpu-eco-toggle">github.com/juw12/cpu-eco-toggle</a></li><li><a href="https://juw12.github.io/p/cpu-eco-toggle/">juw12.github.io/p/cpu-eco-toggle</a></li><li><a href="https://juw12.github.io/cpu-eco-toggle/">juw12.github.io/cpu-eco-toggle</a></li></ul></div>
+<blockquote><p>CPU Eco Toggle - one click gives a pinned CPU room to breathe</p></blockquote>
+<ul><li><strong>Repo:</strong> <a href="https://github.com/juw12/cpu-eco-toggle">https://github.com/juw12/cpu-eco-toggle</a> (public, MIT)</li><li><strong>Landing page:</strong> <a href="https://juw12.github.io/p/cpu-eco-toggle/">https://juw12.github.io/p/cpu-eco-toggle/</a></li><li><strong>Demo page:</strong> <a href="https://juw12.github.io/cpu-eco-toggle/">https://juw12.github.io/cpu-eco-toggle/</a> (a labelled HTML illustration of the tray menu, tooltip and notification using the app&#x27;s own strings; not a running copy)</li><li><strong>Local copy:</strong> <code>E:\Projects\cpu-eco-toggle</code></li></ul>
+<h2>What it is</h2>
+<p>A Windows tray icon (green = ON, grey = OFF). ON moves windowless background processes (opencode, cargo, rustc, ollama, llama-server, python, pythonw and headless msedge; never anything Vector started, never a process with a visible window) onto cores 3-7 (mask 0xF8, 5 of 8) at BelowNormal priority and re-applies that every 30 s so new jobs are caught. OFF puts every changed process back to its original priority and cores, including child processes that inherited the limit. A second launch toggles the running copy, so a pinned taskbar shortcut works as an on/off button. Right-click: status, trim background memory, exit.</p>
+<h2>Measured</h2>
+<ul><li>On this PC (8 cores): OFF -&gt; 0 processes limited, ON -&gt; 35 processes limited. Nothing was stopped.</li><li>Why it was built: the PC was at 100% CPU and 97% RAM from background jobs. The limit leaves about 3/8 of the CPU for interactive work; total CPU stayed high (about 92% average) because Vector and the apps in use were the rest.</li></ul>
+<h2>Limits</h2>
+<ul><li>Windows only (Windows PowerShell 5.1 and WinForms).</li><li>Only the process names listed above; affinity and priority last until a process restarts.</li><li>The tray icon can hide behind the tray arrow; drag it onto the taskbar. Pinning the Start-menu shortcut is manual.</li></ul>
+<h2>Next</h2>
+<ul><li>&#9744; Configurable process list and core mask (now fixed in the script)</li><li>Portfolio card: <a href="https://juwenlie.pages.dev/">https://juwenlie.pages.dev/</a> (catalog <code>e1efeca</code>, card art <code>06ed06e</code>, 2026-11-12)</li><li>Landing page: <a href="https://juw12.github.io/p/cpu-eco-toggle/">https://juw12.github.io/p/cpu-eco-toggle/</a> (live 2026-11-12, juw12.github.io <code>0968e5a</code>; gates 1/1, DNA 1/1 incl. fonts)</li></ul>
+<h2>Hone 2026-11-12</h2>
+<ul><li>Repo published (<code>41452a9</code>, demo page <code>4cd66d9</code>, GitHub Pages from /docs), topics and homepage set.</li><li>Profile README entry under &quot;Tools and agent skills&quot; (<code>45082ac</code>); profile <code>.github/landing.json</code> synced (<code>494588c</code>).</li><li>Landing page built and published (<code>0968e5a</code>); hero CTAs relabelled to &quot;Get it on GitHub&quot; / &quot;See the demo&quot; and the generic &quot;try it in the browser&quot; FAQ line dropped, because the demo is an illustration.</li><li>Portfolio card added (category Software, links to the landing page): art <code>06ed06e</code>, catalog <code>e1efeca</code>, house-style check 62/62; sync-cards workflow triggered once.</li></ul>
+<h2>Hone 2026-11-16</h2>
+<ul><li>Always-on guard (<code>9276d78</code>): background jobs stay at BelowNormal priority whether the switch is ON or OFF; new processes are picked up every 30 s. Low-memory warning in the log and tray.</li><li>Crash restart (<code>bfb6f2b</code>): Vector is started again after a crash and a list of open tasks (<code>E:\Projects\cpu-eco-toggle\VectorResume.txt</code>) opens. Limits: 3 restarts per hour, waits for 6 GB of free virtual memory.</li><li>Frozen restart (<code>d2d128b</code>): a Vector window that Windows reports as not responding for 3 minutes is ended and restarted (<code>$restartVectorWhenFrozenMinutes</code>, 0 = never). Tested with stand-in processes only, not with a real frozen Vector.</li><li>Not built: pressing Retry inside a Vector chat. Vector retries a dropped connection itself and offers no setting, CLI or API for it.</li><li>Docs <code>8d87e70</code> (README, demo page). GitHub description changed from &quot;One-click Windows tray switch that frees CPU by moving background jobs (agents, builds, LLMs) to fewer cores at lower priority - nothing gets stopped.&quot; to &quot;Windows tray guard: background jobs (agents, builds, LLMs) run at lower priority and, with one click, on fewer cores. Restarts Vector after a crash or freeze.&quot;</li><li>Landing page <code>769e21d</code> (gates 1/1, DNA 1/1 incl. fonts), profile README <code>e51e345</code>, portfolio catalog <code>494db00</code> (sync run succeeded, card text live on <a href="https://juwenlie.pages.dev/">https://juwenlie.pages.dev/</a>).</li><li>Open: the frozen check only sees a window Windows reports as not responding; a stuck chat inside a responsive window is not caught. A second pagefile on D: was skipped (needs admin).</li></ul>
+</main>
+<footer>Made with <a href="https://juw12.github.io/p/cairn/">Cairn</a> from notes marked <code>publish: true</code>. Everything else stays private.</footer>
+</body>
+</html>

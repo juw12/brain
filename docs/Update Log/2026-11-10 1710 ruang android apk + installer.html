@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Cairn">
+<title>ruang v1.2.0: signed Android APK + Windows installer · Juwen Lie</title>
+<meta name="description" content="Asked: &quot;fix the limits, and continue next&quot;. Shipped Release v1.2.0: https://github.com/juw12/ruang/releases/tag/v1.2.0 Ruang-1.2.0-android.apk (18,000,607…">
+<link rel="canonical" href="https://juw12.github.io/brain/Update%20Log/2026-11-10%201710%20ruang%20android%20apk%20%2B%20installer.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ruang v1.2.0: signed Android APK + Windows installer · Juwen Lie">
+<meta property="og:description" content="Asked: &quot;fix the limits, and continue next&quot;. Shipped Release v1.2.0: https://github.com/juw12/ruang/releases/tag/v1.2.0 Ruang-1.2.0-android.apk (18,000,607…">
+<meta property="og:url" content="https://juw12.github.io/brain/Update%20Log/2026-11-10%201710%20ruang%20android%20apk%20%2B%20installer.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">&larr; Juwen Lie</a>
+<h1>ruang v1.2.0: signed Android APK + Windows installer</h1>
+<p class="meta">2026-11-10</p>
+<p class="tags"><span>update-log</span><span>ruang</span><span>tauri</span><span>android</span><span>nsis</span></p>
+<p>Asked: &quot;fix the limits, and continue next&quot;.</p>
+<h2>Shipped</h2>
+<ul><li>Release v1.2.0: <a href="https://github.com/juw12/ruang/releases/tag/v1.2.0">https://github.com/juw12/ruang/releases/tag/v1.2.0</a><ul><li><code>Ruang-1.2.0-android.apk</code> (18,000,607 bytes): Tauri 2 mobile, arm64 + armv7 + x86_64, minSdk 24 (Android 7.0), versionCode 1002000, signed with a stable release key (APK v2 + v3 signatures).</li><li><code>Ruang-1.2.0-windows-x64-setup.exe</code> (1,654,700 bytes): NSIS installer, per-user, Start-menu entry + uninstaller.</li><li><code>Ruang-1.2.0-windows-x64.exe</code> (4,016,128 bytes): portable exe.</li><li><code>SHA256SUMS.txt</code> covering all three.</li></ul></li><li>Code: app logic moved to <code>desktop/src/lib.rs</code> (<code>mobile_entry_point</code>), desktop-only window options behind <code>#[cfg(desktop)]</code>, WebView2 args behind <code>#[cfg(windows)]</code>; <code>desktop/package.json</code> with the local Tauri CLI (Gradle calls <code>npm run tauri</code>).</li><li>APK signing certificate SHA-256: <code>38:7F:69:3C:F8:17:AE:58:E7:F3:F0:CC:35:D3:1F:6B:CA:0F:C9:EB:8A:63:D1:75:6C:77:52:CB:A5:7C:18:E9</code>. Key kept in repo secrets plus an offline backup outside the repo.</li><li>CI (<code>.github/workflows/desktop.yml</code>): windows, android, android-smoke and release jobs; a release is only published when every check passes.</li></ul>
+<h2>Verified</h2>
+<ul><li>Local web gates: ALL PASS in 302.9 s (G1 54/54, i18n, G2a-G2g, G6 390 px).</li><li>Windows CI: WebView2 window smoke test; silent install found ruang.exe, uninstall.exe and a Start-menu shortcut, and silent uninstall removed the exe.</li><li>Android CI on an Android 14 emulator: installs, app process running, no FATAL EXCEPTION, screenshot shows the app UI (region dialog, view tabs, step bar). One WebGL GL_INVALID_OPERATION log line from the emulator&#x27;s software GPU.</li><li><code>apksigner verify</code>: the signing certificate digest matches the local key.</li><li>All 4 release files download from GitHub.</li></ul>
+<h2>Not done / limits</h2>
+<ul><li>Windows files are still not code-signed (SmartScreen warning). Needs a certificate: SignPath Foundation (free for OSS, needs an application), Azure Trusted Signing or an OV certificate.</li><li>No native iPhone app: needs an Apple Developer account (US$99/yr) and a Mac build. The Safari &quot;Add to Home Screen&quot; PWA remains.</li><li>The APK is not on Google Play (needs a Play Console account, one-time US$25 fee). The CI could build an AAB for it.</li><li>The APK has not been tested on a physical phone, and camera/photo picking has not been tested inside the Android WebView.</li></ul>
+</main>
+<footer>Made with <a href="https://juw12.github.io/p/cairn/">Cairn</a> from notes marked <code>publish: true</code>. Everything else stays private.</footer>
+</body>
+</html>

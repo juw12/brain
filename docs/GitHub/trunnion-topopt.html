@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Cairn">
+<title>trunnion-topopt · Juwen Lie</title>
+<meta name="description" content="Topology-optimised the A-axis trunnion upright of a 5-axis FDM printer for every tilt direction and belt pull; the v4 design cuts worst-case compliance from…">
+<link rel="canonical" href="https://juw12.github.io/brain/GitHub/trunnion-topopt.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="trunnion-topopt · Juwen Lie">
+<meta property="og:description" content="Topology-optimised the A-axis trunnion upright of a 5-axis FDM printer for every tilt direction and belt pull; the v4 design cuts worst-case compliance from…">
+<meta property="og:url" content="https://juw12.github.io/brain/GitHub/trunnion-topopt.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">&larr; Juwen Lie</a>
+<h1>trunnion-topopt</h1>
+<p class="meta">author · 2026-11-08</p>
+<p class="tags"><span>github</span><span>project/trunnion-topopt</span><span>status/active</span><span>public</span></p>
+<div class="claim">Topology-optimised the A-axis trunnion upright of a 5-axis FDM printer for every tilt direction and belt pull; the v4 design cuts worst-case compliance from 6.8 to 2.0 N mm and belt-pull axle tilt from 28 to 4.6 arcmin, prints without supports, and is checked by fine-mesh FE<ul><li><a href="https://github.com/juw12/trunnion-topopt">github.com/juw12/trunnion-topopt</a></li><li><a href="https://juw12.github.io/trunnion-topopt/">juw12.github.io/trunnion-topopt</a></li></ul></div>
+<blockquote><p>Topology optimisation of the A-axis trunnion upright for a 5-axis 3D printer. Instead of one vertical load, the optimiser sees the worst case over the whole tilt envelope plus the overhung belt-pull case, with a 45 degree self-supporting constraint, then every candidate is re-checked on a finer FE mesh.</p></blockquote>
+<ul><li><strong>Repo:</strong> <a href="https://github.com/juw12/trunnion-topopt">https://github.com/juw12/trunnion-topopt</a> (public, MIT)</li><li><strong>Results page:</strong> <a href="https://juw12.github.io/trunnion-topopt/">https://juw12.github.io/trunnion-topopt/</a> (3D viewer of six designs, metrics, checks, STL/STEP downloads)</li><li><strong>Landing:</strong> <a href="https://juw12.github.io/p/trunnion-topopt/">https://juw12.github.io/p/trunnion-topopt/</a></li><li><strong>Stack:</strong> Python (NumPy/SciPy) 3D SIMP + FE, CadQuery STEP export, three.js viewer</li><li><strong>Recommended part (v4 Tilt gate):</strong> 143.5 cm3 / 179 g PA-CF; worst-case compliance 1.96 N mm; axle tilt 4.56 arcmin under 100 N belt pull (target 5); seat deflection worst 25 um; peak von Mises 2.0 MPa; 0 % unsupported overhang; one solid body.</li><li><strong>Baselines:</strong> single-load TO (v0) 6.83 N mm / 28.3 arcmin; conventional webbed part (R0) 6.28 N mm / 70.2 arcmin.</li><li><strong>Limits:</strong> linear-elastic, isotropic material model; printed anisotropy, fatigue and the real printer&#x27;s belt load are not measured.</li></ul>
+<h2>Log</h2>
+<ul><li>2026-11-08: built and honed (v0 to v4, 6 gates pass on v4, results UI by /design bracket, slop_check clean); published repo <code>efad34b</code>, Pages results site, landing page <code>801209a</code>, profile Engineering entry <code>750e016</code>, portfolio card (art <code>46a98e5</code>, catalog <code>3c24e3e</code>).</li></ul>
+<p>See also: GitHub repos</p>
+</main>
+<footer>Made with <a href="https://juw12.github.io/p/cairn/">Cairn</a> from notes marked <code>publish: true</code>. Everything else stays private.</footer>
+</body>
+</html>
