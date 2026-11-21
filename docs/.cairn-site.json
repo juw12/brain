@@ -2,6 +2,7 @@
   "builtBy": "cairn",
   "files": [
     ".nojekyll",
+    "4a237b1a22a9cdfb2783108c3760cfc9.txt",
     "GitHub/Explicit-Maccormack-Method.html",
     "GitHub/Upwind-Differencing-Scheme.html",
     "GitHub/atomize.html",
@@ -51,6 +52,7 @@
     "Update Log/2026-11-10 1620 ruang app.html",
     "Update Log/2026-11-10 1710 ruang android apk + installer.html",
     "Update Log/2026-11-10 1830 ruang hone r2 lens.html",
+    "feed.xml",
     "index.html",
     "robots.txt",
     "search.js",

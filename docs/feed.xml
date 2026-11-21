@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Juwen Lie</title>
+  <id>https://juw12.github.io/brain/</id>
+  <updated>2026-11-21T00:00:00Z</updated>
+  <link rel="self" href="https://juw12.github.io/brain/feed.xml"/>
+  <link rel="hub" href="https://pubsubhubbub.appspot.com/"/>
+  <link rel="alternate" href="https://juw12.github.io/brain/"/>
+  <author><name>Juwen Lie</name></author>
+  <entry>
+    <title>Built buddy: Walks new engineers through clunky work software (PLM, SRM, ERP), click by click, or…</title>
+    <link href="https://juw12.github.io/brain/GitHub/buddy.html"/>
+    <id>https://juw12.github.io/brain/GitHub/buddy.html</id>
+    <updated>2026-11-21T00:00:00Z</updated>
+    <summary>Built buddy: Walks new engineers through clunky work software (PLM, SRM, ERP), click by click, or…</summary>
+  </entry>
+  <entry>
+    <title>Built titip: Outlook inbox, reply and compose from a paired phone, served by your own PC, plus a Gmail…</title>
+    <link href="https://juw12.github.io/brain/GitHub/titip.html"/>
+    <id>https://juw12.github.io/brain/GitHub/titip.html</id>
+    <updated>2026-11-20T00:00:00Z</updated>
+    <summary>Built titip: Outlook inbox, reply and compose from a paired phone, served by your own PC, plus a Gmail autopilot with code-enforced limits</summary>
+  </entry>
+  <entry>
+    <title>Built skills: Agent skills I wrote for Claude Code, OpenCode, Codex and SkillMouse</title>
+    <link href="https://juw12.github.io/brain/GitHub/skills.html"/>
+    <id>https://juw12.github.io/brain/GitHub/skills.html</id>
+    <updated>2026-11-20T00:00:00Z</updated>
+    <summary>Built skills: Agent skills I wrote for Claude Code, OpenCode, Codex and SkillMouse</summary>
+  </entry>
+  <entry>
+    <title>Built cairn: A second brain that lives inside your repo</title>
+    <link href="https://juw12.github.io/brain/GitHub/cairn.html"/>
+    <id>https://juw12.github.io/brain/GitHub/cairn.html</id>
+    <updated>2026-11-19T00:00:00Z</updated>
+    <summary>Built cairn: A second brain that lives inside your repo</summary>
+  </entry>
+  <entry>
+    <title>Built Inti: a from-scratch capability microkernel OS in Rust for 32-bit x86 that boots in a browser tab and…</title>
+    <link href="https://juw12.github.io/brain/GitHub/inti.html"/>
+    <id>https://juw12.github.io/brain/GitHub/inti.html</id>
+    <updated>2026-11-18T00:00:00Z</updated>
+    <summary>Built Inti: a from-scratch capability microkernel OS in Rust for 32-bit x86 that boots in a browser tab and restarts a crashed or hung driver while the system…</summary>
+  </entry>
+  <entry>
+    <title>Built Vera Checks (repo not-real-vera): a short-video channel kit about scam and deepfake defence with one…</title>
+    <link href="https://juw12.github.io/brain/GitHub/not-real-vera.html"/>
+    <id>https://juw12.github.io/brain/GitHub/not-real-vera.html</id>
+    <updated>2026-11-17T00:00:00Z</updated>
+    <summary>Built Vera Checks (repo not-real-vera): a short-video channel kit about scam and deepfake defence with one on-camera presenter - niche research, channel…</summary>
+  </entry>
+  <entry>
+    <title>Built Telisik (first released as Sumber): a browser-only search page that sends one query to up to 23 public…</title>
+    <link href="https://juw12.github.io/brain/GitHub/telisik.html"/>
+    <id>https://juw12.github.io/brain/GitHub/telisik.html</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <summary>Built Telisik (first released as Sumber): a browser-only search page that sends one query to up to 23 public libraries (Wikipedia, Stack Exchange, Hacker…</summary>
+  </entry>
+  <entry>
+    <title>Built Kilat: a small statically typed scripting language with units of measure and a fuel-and-memory…</title>
+    <link href="https://juw12.github.io/brain/GitHub/kilat.html"/>
+    <id>https://juw12.github.io/brain/GitHub/kilat.html</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <summary>Built Kilat: a small statically typed scripting language with units of measure and a fuel-and-memory sandbox, written from scratch in Rust with zero…</summary>
+  </entry>
+  <entry>
+    <title>Built CPU Eco Toggle: a Windows tray guard (PowerShell 5.1 + WinForms, no admin rights) that keeps…</title>
+    <link href="https://juw12.github.io/brain/GitHub/cpu-eco-toggle.html"/>
+    <id>https://juw12.github.io/brain/GitHub/cpu-eco-toggle.html</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <summary>Built CPU Eco Toggle: a Windows tray guard (PowerShell 5.1 + WinForms, no admin rights) that keeps windowless background jobs such as AI agents, builds, local…</summary>
+  </entry>
+  <entry>
+    <title>Built tolstack: a 1-D tolerance stack-up tool that reads a STEP assembly and 2D PDF drawings, ranks the part…</title>
+    <link href="https://juw12.github.io/brain/GitHub/tolstack.html"/>
+    <id>https://juw12.github.io/brain/GitHub/tolstack.html</id>
+    <updated>2026-11-13T00:00:00Z</updated>
+    <summary>Built tolstack: a 1-D tolerance stack-up tool that reads a STEP assembly and 2D PDF drawings, ranks the part chains between two faces, finds tolerances on the…</summary>
+  </entry>
+  <entry>
+    <title>Built Lahap: an offline-first food diary PWA you can search, with on-device food cut-outs (U-2-Net in the…</title>
+    <link href="https://juw12.github.io/brain/GitHub/lahap.html"/>
+    <id>https://juw12.github.io/brain/GitHub/lahap.html</id>
+    <updated>2026-11-13T00:00:00Z</updated>
+    <summary>Built Lahap: an offline-first food diary PWA you can search, with on-device food cut-outs (U-2-Net in the browser), nutrition estimates against a quiz-set…</summary>
+  </entry>
+  <entry>
+    <title>Built jeda: ruang hening setiap iman (PWA)</title>
+    <link href="https://juw12.github.io/brain/GitHub/jeda.html"/>
+    <id>https://juw12.github.io/brain/GitHub/jeda.html</id>
+    <updated>2026-11-13T00:00:00Z</updated>
+    <summary>Built jeda: ruang hening setiap iman (PWA)</summary>
+  </entry>
+  <entry>
+    <title>Built Who Threw?: a Mobile Legends match analyzer that gives each player a role-aware 0-10 score from the…</title>
+    <link href="https://juw12.github.io/brain/GitHub/mlbb-blame.html"/>
+    <id>https://juw12.github.io/brain/GitHub/mlbb-blame.html</id>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>Built Who Threw?: a Mobile Legends match analyzer that gives each player a role-aware 0-10 score from the end-screen stats, splits blame (loss) or credit…</summary>
+  </entry>
+  <entry>
+    <title>ruang v1.3.0: lens read from the photo (/hone round 2)</title>
+    <link href="https://juw12.github.io/brain/Update%20Log/2026-11-10%201830%20ruang%20hone%20r2%20lens.html"/>
+    <id>https://juw12.github.io/brain/Update%20Log/2026-11-10%201830%20ruang%20hone%20r2%20lens.html</id>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <summary>Asked: &quot;continue /hone then update github&quot;. Shipped Lens from EXIF: the 35 mm-equivalent focal length (FocalLengthIn35mmFilm) sets the field of view, computed…</summary>
+  </entry>
+  <entry>
+    <title>ruang v1.2.0: signed Android APK + Windows installer</title>
+    <link href="https://juw12.github.io/brain/Update%20Log/2026-11-10%201710%20ruang%20android%20apk%20%2B%20installer.html"/>
+    <id>https://juw12.github.io/brain/Update%20Log/2026-11-10%201710%20ruang%20android%20apk%20%2B%20installer.html</id>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <summary>Asked: &quot;fix the limits, and continue next&quot;. Shipped Release v1.2.0: https://github.com/juw12/ruang/releases/tag/v1.2.0 Ruang-1.2.0-android.apk (18,000,607…</summary>
+  </entry>
+  <entry>
+    <title>ruang: now an installable app (Windows exe + phone/desktop PWA)</title>
+    <link href="https://juw12.github.io/brain/Update%20Log/2026-11-10%201620%20ruang%20app.html"/>
+    <id>https://juw12.github.io/brain/Update%20Log/2026-11-10%201620%20ruang%20app.html</id>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <summary>Asked: &quot;make it into app, not html&quot;. Shipped Windows desktop app: Tauri 2 shell (desktop/) with the web app embedded; one portable exe, opens in its own…</summary>
+  </entry>
+  <entry>
+    <title>Built Ruang: room photos to a priced 3D plan in the browser - 7 render styles, drag-to-arrange, country…</title>
+    <link href="https://juw12.github.io/brain/GitHub/ruang.html"/>
+    <id>https://juw12.github.io/brain/GitHub/ruang.html</id>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <summary>Built Ruang: room photos to a priced 3D plan in the browser - 7 render styles, drag-to-arrange, country renovation templates, local-currency estimate…</summary>
+  </entry>
+  <entry>
+    <title>Built Reda: chronic hives (biduran) companion PWA - UAS7 diary, trigger finder, photo-guided self-tests…</title>
+    <link href="https://juw12.github.io/brain/GitHub/reda.html"/>
+    <id>https://juw12.github.io/brain/GitHub/reda.html</id>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <summary>Built Reda: chronic hives (biduran) companion PWA - UAS7 diary, trigger finder, photo-guided self-tests, guideline treatment plan</summary>
+  </entry>
+  <entry>
+    <title>Built Jepret: a free, browser-only app that turns an SD card of photos into Adobe Stock and Shutterstock…</title>
+    <link href="https://juw12.github.io/brain/GitHub/jepret.html"/>
+    <id>https://juw12.github.io/brain/GitHub/jepret.html</id>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <summary>Built Jepret: a free, browser-only app that turns an SD card of photos into Adobe Stock and Shutterstock upload CSVs - culls blurry and burst-duplicate shots…</summary>
+  </entry>
+  <entry>
+    <title>Built Hexbane: scans AI agent skills, MCP servers and tool lists for prompt injection, hidden or disguised…</title>
+    <link href="https://juw12.github.io/brain/GitHub/hexbane.html"/>
+    <id>https://juw12.github.io/brain/GitHub/hexbane.html</id>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <summary>Built Hexbane: scans AI agent skills, MCP servers and tool lists for prompt injection, hidden or disguised text, secret theft and risky commands before they…</summary>
+  </entry>
+  <entry>
+    <title>Built Teduh: a free, offline-first 3D solarpunk sky-village life sim in the browser (PWA)</title>
+    <link href="https://juw12.github.io/brain/GitHub/teduh.html"/>
+    <id>https://juw12.github.io/brain/GitHub/teduh.html</id>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <summary>Built Teduh: a free, offline-first 3D solarpunk sky-village life sim in the browser (PWA)</summary>
+  </entry>
+  <entry>
+    <title>Built an interactive portfolio site plus two browser games (Cozy Island, Townsquare 3D); Cozy Island plays…</title>
+    <link href="https://juw12.github.io/brain/GitHub/portfolio.html"/>
+    <id>https://juw12.github.io/brain/GitHub/portfolio.html</id>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <summary>Built an interactive portfolio site plus two browser games (Cozy Island, Townsquare 3D); Cozy Island plays on desktop and phones with a clean, emoji-free UI</summary>
+  </entry>
+  <entry>
+    <title>Built Mise: a quiet kitchen game (home kitchen, or a small restaurant as chef, server or owner) with…</title>
+    <link href="https://juw12.github.io/brain/GitHub/mise.html"/>
+    <id>https://juw12.github.io/brain/GitHub/mise.html</id>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <summary>Built Mise: a quiet kitchen game (home kitchen, or a small restaurant as chef, server or owner) with live-synthesised Web Audio ASMR, in plain HTML/JS</summary>
+  </entry>
+  <entry>
+    <title>Built Meetline: finds the fairest place for 2 to 8 people to meet, with a road route for each person</title>
+    <link href="https://juw12.github.io/brain/GitHub/meetline.html"/>
+    <id>https://juw12.github.io/brain/GitHub/meetline.html</id>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <summary>Built Meetline: finds the fairest place for 2 to 8 people to meet, with a road route for each person</summary>
+  </entry>
+  <entry>
+    <title>Topology-optimised the A-axis trunnion upright of a 5-axis FDM printer for every tilt direction and belt…</title>
+    <link href="https://juw12.github.io/brain/GitHub/trunnion-topopt.html"/>
+    <id>https://juw12.github.io/brain/GitHub/trunnion-topopt.html</id>
+    <updated>2026-11-08T00:00:00Z</updated>
+    <summary>Topology-optimised the A-axis trunnion upright of a 5-axis FDM printer for every tilt direction and belt pull; the v4 design cuts worst-case compliance from…</summary>
+  </entry>
+  <entry>
+    <title>Built Riak: a free, offline-first cozy aquarium web app (PWA) with real water care, fishing, breeding, a…</title>
+    <link href="https://juw12.github.io/brain/GitHub/riak.html"/>
+    <id>https://juw12.github.io/brain/GitHub/riak.html</id>
+    <updated>2026-11-08T00:00:00Z</updated>
+    <summary>Built Riak: a free, offline-first cozy aquarium web app (PWA) with real water care, fishing, breeding, a greenhouse and a coral reef lab</summary>
+  </entry>
+  <entry>
+    <title>Built PocketDex: an offline pixel-sprite Pokédex PWA with daily habits, a focus timer, a Field Dex camera…</title>
+    <link href="https://juw12.github.io/brain/GitHub/pocketdex.html"/>
+    <id>https://juw12.github.io/brain/GitHub/pocketdex.html</id>
+    <updated>2026-11-08T00:00:00Z</updated>
+    <summary>Built PocketDex: an offline pixel-sprite Pokédex PWA with daily habits, a focus timer, a Field Dex camera and a three.js meadow</summary>
+  </entry>
+  <entry>
+    <title>Built Hoki: a waving lucky cat (招财猫) for the phone home screen (PWA + Android widget) and the Windows…</title>
+    <link href="https://juw12.github.io/brain/GitHub/hoki.html"/>
+    <id>https://juw12.github.io/brain/GitHub/hoki.html</id>
+    <updated>2026-11-08T00:00:00Z</updated>
+    <summary>Built Hoki: a waving lucky cat (招财猫) for the phone home screen (PWA + Android widget) and the Windows desktop (WPF widget)</summary>
+  </entry>
+  <entry>
+    <title>Built gate: a merge gate for AI-agent code (v0.5.0, 61 tests on Linux, macOS and Windows)</title>
+    <link href="https://juw12.github.io/brain/GitHub/gate.html"/>
+    <id>https://juw12.github.io/brain/GitHub/gate.html</id>
+    <updated>2026-11-08T00:00:00Z</updated>
+    <summary>Built gate: a merge gate for AI-agent code (v0.5.0, 61 tests on Linux, macOS and Windows)</summary>
+  </entry>
+  <entry>
+    <title>Built Founder Studio: a local 3D buyer-panel simulator for pre-launch ideas where every number is computed…</title>
+    <link href="https://juw12.github.io/brain/GitHub/founder-studio.html"/>
+    <id>https://juw12.github.io/brain/GitHub/founder-studio.html</id>
+    <updated>2026-11-08T00:00:00Z</updated>
+    <summary>Built Founder Studio: a local 3D buyer-panel simulator for pre-launch ideas where every number is computed by open scripts, with a full in-browser demo</summary>
+  </entry>
+  <entry>
+    <title>Built Bilas: a quiet first-person 3D coin laundry with synthesized ASMR and touch gestures, on web, PWA…</title>
+    <link href="https://juw12.github.io/brain/GitHub/bilas.html"/>
+    <id>https://juw12.github.io/brain/GitHub/bilas.html</id>
+    <updated>2026-11-08T00:00:00Z</updated>
+    <summary>Built Bilas: a quiet first-person 3D coin laundry with synthesized ASMR and touch gestures, on web, PWA, Android and iOS</summary>
+  </entry>
+  <entry>
+    <title>Built earlystar: Find GitHub repos before they trend</title>
+    <link href="https://juw12.github.io/brain/GitHub/earlystar.html"/>
+    <id>https://juw12.github.io/brain/GitHub/earlystar.html</id>
+    <updated>2026-11-07T00:00:00Z</updated>
+    <summary>Built earlystar: Find GitHub repos before they trend</summary>
+  </entry>
+  <entry>
+    <title>Built skillmouse: Use Claude Code / Codex / OpenCode skills and agents with any model</title>
+    <link href="https://juw12.github.io/brain/GitHub/skillmouse.html"/>
+    <id>https://juw12.github.io/brain/GitHub/skillmouse.html</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Built skillmouse: Use Claude Code / Codex / OpenCode skills and agents with any model</summary>
+  </entry>
+  <entry>
+    <title>Built retrace: Find the AI behind anything</title>
+    <link href="https://juw12.github.io/brain/GitHub/retrace.html"/>
+    <id>https://juw12.github.io/brain/GitHub/retrace.html</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Built retrace: Find the AI behind anything</summary>
+  </entry>
+  <entry>
+    <title>Built peakwise: free, neutral 60-second check whether a battery pays back for a Taiwan factory</title>
+    <link href="https://juw12.github.io/brain/GitHub/peakwise.html"/>
+    <id>https://juw12.github.io/brain/GitHub/peakwise.html</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Built peakwise: free, neutral 60-second check whether a battery pays back for a Taiwan factory</summary>
+  </entry>
+  <entry>
+    <title>Built morning-paper-web: curated news, stock desk, and a portfolio + alerts that sync once you sign in</title>
+    <link href="https://juw12.github.io/brain/GitHub/morning-paper-web.html"/>
+    <id>https://juw12.github.io/brain/GitHub/morning-paper-web.html</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Built morning-paper-web: curated news, stock desk, and a portfolio + alerts that sync once you sign in</summary>
+  </entry>
+  <entry>
+    <title>Built millennium-digest: Weekly arXiv digest on the Millennium Prize problems, plus a rule-checked…</title>
+    <link href="https://juw12.github.io/brain/GitHub/millennium-digest.html"/>
+    <id>https://juw12.github.io/brain/GitHub/millennium-digest.html</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Built millennium-digest: Weekly arXiv digest on the Millennium Prize problems, plus a rule-checked, drafts-only…</summary>
+  </entry>
+  <entry>
+    <title>Built linkedin-autopilot: Turns your GitHub into a LinkedIn schedule</title>
+    <link href="https://juw12.github.io/brain/GitHub/linkedin-autopilot.html"/>
+    <id>https://juw12.github.io/brain/GitHub/linkedin-autopilot.html</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Built linkedin-autopilot: Turns your GitHub into a LinkedIn schedule</summary>
+  </entry>
+  <entry>
+    <title>Built juw12.github.io: Root GitHub Pages site for juw12</title>
+    <link href="https://juw12.github.io/brain/GitHub/juw12.github.io.html"/>
+    <id>https://juw12.github.io/brain/GitHub/juw12.github.io.html</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Built juw12.github.io: Root GitHub Pages site for juw12</summary>
+  </entry>
+  <entry>
+    <title>Built tools: Small local tools for underrated problems + a factory to build more</title>
+    <link href="https://juw12.github.io/brain/GitHub/tools.html"/>
+    <id>https://juw12.github.io/brain/GitHub/tools.html</id>
+    <updated>2026-11-05T00:00:00Z</updated>
+    <summary>Built tools: Small local tools for underrated problems + a factory to build more</summary>
+  </entry>
+  <entry>
+    <title>Built loop-zero: AI automation starter kit for small businesses</title>
+    <link href="https://juw12.github.io/brain/GitHub/loop-zero.html"/>
+    <id>https://juw12.github.io/brain/GitHub/loop-zero.html</id>
+    <updated>2026-11-05T00:00:00Z</updated>
+    <summary>Built loop-zero: AI automation starter kit for small businesses</summary>
+  </entry>
+  <entry>
+    <title>Built atomize: Turn one blog post into a week of social content</title>
+    <link href="https://juw12.github.io/brain/GitHub/atomize.html"/>
+    <id>https://juw12.github.io/brain/GitHub/atomize.html</id>
+    <updated>2026-11-05T00:00:00Z</updated>
+    <summary>Built atomize: Turn one blog post into a week of social content</summary>
+  </entry>
+  <entry>
+    <title>Built vale: a 3D interactive fairy world</title>
+    <link href="https://juw12.github.io/brain/GitHub/vale.html"/>
+    <id>https://juw12.github.io/brain/GitHub/vale.html</id>
+    <updated>2026-11-04T00:00:00Z</updated>
+    <summary>Built vale: a 3D interactive fairy world</summary>
+  </entry>
+  <entry>
+    <title>Built undanu: digital wedding invitations for Indonesia with RSVP, guest tracking, donations and QR…</title>
+    <link href="https://juw12.github.io/brain/GitHub/undanu.html"/>
+    <id>https://juw12.github.io/brain/GitHub/undanu.html</id>
+    <updated>2026-11-04T00:00:00Z</updated>
+    <summary>Built undanu: digital wedding invitations for Indonesia with RSVP, guest tracking, donations and QR…</summary>
+  </entry>
+  <entry>
+    <title>Built nudge: See which friends you&#x27;ve been leaving on read while you doomscroll</title>
+    <link href="https://juw12.github.io/brain/GitHub/nudge.html"/>
+    <id>https://juw12.github.io/brain/GitHub/nudge.html</id>
+    <updated>2026-11-04T00:00:00Z</updated>
+    <summary>Built nudge: See which friends you&#x27;ve been leaving on read while you doomscroll</summary>
+  </entry>
+  <entry>
+    <title>Built hearthwood: a medieval low-poly village prototype (Unity 6 + URP)</title>
+    <link href="https://juw12.github.io/brain/GitHub/hearthwood.html"/>
+    <id>https://juw12.github.io/brain/GitHub/hearthwood.html</id>
+    <updated>2026-11-04T00:00:00Z</updated>
+    <summary>Built hearthwood: a medieval low-poly village prototype (Unity 6 + URP)</summary>
+  </entry>
+  <entry>
+    <title>Built game: Games hub for juw12</title>
+    <link href="https://juw12.github.io/brain/GitHub/game.html"/>
+    <id>https://juw12.github.io/brain/GitHub/game.html</id>
+    <updated>2026-11-04T00:00:00Z</updated>
+    <summary>Built game: Games hub for juw12</summary>
+  </entry>
+  <entry>
+    <title>Built Upwind-Differencing-Scheme: 1D linear wave equation solved with the first-order upwind (backward)…</title>
+    <link href="https://juw12.github.io/brain/GitHub/Upwind-Differencing-Scheme.html"/>
+    <id>https://juw12.github.io/brain/GitHub/Upwind-Differencing-Scheme.html</id>
+    <updated>2026-11-04T00:00:00Z</updated>
+    <summary>Built Upwind-Differencing-Scheme: 1D linear wave equation solved with the first-order upwind (backward)…</summary>
+  </entry>
+  <entry>
+    <title>Built Explicit-Maccormack-Method: 1D linear wave equation solved with the explicit MacCormack…</title>
+    <link href="https://juw12.github.io/brain/GitHub/Explicit-Maccormack-Method.html"/>
+    <id>https://juw12.github.io/brain/GitHub/Explicit-Maccormack-Method.html</id>
+    <updated>2026-11-04T00:00:00Z</updated>
+    <summary>Built Explicit-Maccormack-Method: 1D linear wave equation solved with the explicit MacCormack predictor-corrector scheme…</summary>
+  </entry>
+</feed>
