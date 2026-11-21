@@ -2,4 +2,6 @@
 
 Published from a private [Cairn](https://github.com/juw12/cairn) brain. Only notes marked `publish: true` appear here; everything else stays private.
 
+Read and search it on the web: https://juw12.github.io/brain/
+
 Open it in Cairn: https://juw12.github.io/cairn/?u=juw12
